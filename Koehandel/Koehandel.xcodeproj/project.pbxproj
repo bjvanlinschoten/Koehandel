@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = EB11ACF2195817B1006AEF49 /* XYZGameplay.m */; };
+		EB11ACF6195830F7006AEF49 /* card-border.png in Resources */ = {isa = PBXBuildFile; fileRef = EB11ACF4195830F7006AEF49 /* card-border.png */; };
+		EB11ACF7195830F7006AEF49 /* card-back.png in Resources */ = {isa = PBXBuildFile; fileRef = EB11ACF5195830F7006AEF49 /* card-back.png */; };
+		EB11ACFA19586002006AEF49 /* XYZNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */; };
+		EB723F94195437EF0071E80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F93195437EF0071E80C /* Foundation.framework */; };
+		EB723F96195437EF0071E80C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F95195437EF0071E80C /* CoreGraphics.framework */; };
+		EB723F98195437EF0071E80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F97195437EF0071E80C /* UIKit.framework */; };
+		EB723F9E195437EF0071E80C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB723F9C195437EF0071E80C /* InfoPlist.strings */; };
+		EB723FA0195437EF0071E80C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723F9F195437EF0071E80C /* main.m */; };
+		EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FA3195437EF0071E80C /* XYZAppDelegate.m */; };
+		EB723FA7195437EF0071E80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB723FA5195437EF0071E80C /* Main.storyboard */; };
+		EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */; };
+		EB723FAC195437EF0071E80C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB723FAB195437EF0071E80C /* Images.xcassets */; };
+		EB723FB3195437F00071E80C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723FB2195437F00071E80C /* XCTest.framework */; };
+		EB723FB4195437F00071E80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F93195437EF0071E80C /* Foundation.framework */; };
+		EB723FB5195437F00071E80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F97195437EF0071E80C /* UIKit.framework */; };
+		EB723FBD195437F00071E80C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB723FBB195437F00071E80C /* InfoPlist.strings */; };
+		EB723FBF195437F00071E80C /* KoehandelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FBE195437F00071E80C /* KoehandelTests.m */; };
+		EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FC91954384C0071E80C /* XYZPlayer.m */; };
+		EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCC1954449C0071E80C /* XYZDeck.m */; };
+		EB723FD0195444F40071E80C /* XYZCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCF195444F40071E80C /* XYZCard.m */; };
+		EB8D461619546F2000D8B8FD /* Cow.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460C19546F2000D8B8FD /* Cow.png */; };
+		EB8D461719546F2000D8B8FD /* Sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460D19546F2000D8B8FD /* Sheep.png */; };
+		EB8D461819546F2000D8B8FD /* Donkey.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460E19546F2000D8B8FD /* Donkey.png */; };
+		EB8D461919546F2000D8B8FD /* Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460F19546F2000D8B8FD /* Dog.png */; };
+		EB8D461A19546F2000D8B8FD /* Cat.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461019546F2000D8B8FD /* Cat.png */; };
+		EB8D461B19546F2000D8B8FD /* Goose.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461119546F2000D8B8FD /* Goose.png */; };
+		EB8D461C19546F2000D8B8FD /* Pig.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461219546F2000D8B8FD /* Pig.png */; };
+		EB8D461D19546F2000D8B8FD /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461319546F2000D8B8FD /* Horse.png */; };
+		EB8D461E19546F2000D8B8FD /* Goat.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461419546F2000D8B8FD /* Goat.png */; };
+		EB8D461F19546F2000D8B8FD /* Chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461519546F2000D8B8FD /* Chicken.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB723FB6195437F00071E80C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB723F88195437EF0071E80C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB723F8F195437EF0071E80C;
+			remoteInfo = Koehandel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB11ACF1195817B1006AEF49 /* XYZGameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZGameplay.h; sourceTree = "<group>"; };
+		EB11ACF2195817B1006AEF49 /* XYZGameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZGameplay.m; sourceTree = "<group>"; };
+		EB11ACF4195830F7006AEF49 /* card-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-border.png"; path = "../../card-border.png"; sourceTree = "<group>"; };
+		EB11ACF5195830F7006AEF49 /* card-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-back.png"; path = "../../card-back.png"; sourceTree = "<group>"; };
+		EB11ACF819586002006AEF49 /* XYZNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNewGameViewController.h; sourceTree = "<group>"; };
+		EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZNewGameViewController.m; sourceTree = "<group>"; };
+		EB723F90195437EF0071E80C /* Koehandel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koehandel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB723F93195437EF0071E80C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB723F95195437EF0071E80C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB723F97195437EF0071E80C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB723F9B195437EF0071E80C /* Koehandel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Koehandel-Info.plist"; sourceTree = "<group>"; };
+		EB723F9D195437EF0071E80C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB723F9F195437EF0071E80C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB723FA1195437EF0071E80C /* Koehandel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Koehandel-Prefix.pch"; sourceTree = "<group>"; };
+		EB723FA2195437EF0071E80C /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
+		EB723FA3195437EF0071E80C /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
+		EB723FA6195437EF0071E80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB723FA8195437EF0071E80C /* XYZAuctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAuctionViewController.h; sourceTree = "<group>"; };
+		EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAuctionViewController.m; sourceTree = "<group>"; };
+		EB723FAB195437EF0071E80C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB723FB1195437F00071E80C /* KoehandelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoehandelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB723FB2195437F00071E80C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EB723FBA195437F00071E80C /* KoehandelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KoehandelTests-Info.plist"; sourceTree = "<group>"; };
+		EB723FBC195437F00071E80C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB723FBE195437F00071E80C /* KoehandelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KoehandelTests.m; sourceTree = "<group>"; };
+		EB723FC81954384C0071E80C /* XYZPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZPlayer.h; sourceTree = "<group>"; };
+		EB723FC91954384C0071E80C /* XYZPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZPlayer.m; sourceTree = "<group>"; };
+		EB723FCB1954449C0071E80C /* XYZDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZDeck.h; sourceTree = "<group>"; };
+		EB723FCC1954449C0071E80C /* XYZDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZDeck.m; sourceTree = "<group>"; };
+		EB723FCE195444F40071E80C /* XYZCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCard.h; sourceTree = "<group>"; };
+		EB723FCF195444F40071E80C /* XYZCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCard.m; sourceTree = "<group>"; };
+		EB8D460C19546F2000D8B8FD /* Cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cow.png; path = ../../Animals/Cow.png; sourceTree = "<group>"; };
+		EB8D460D19546F2000D8B8FD /* Sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sheep.png; path = ../../Animals/Sheep.png; sourceTree = "<group>"; };
+		EB8D460E19546F2000D8B8FD /* Donkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Donkey.png; path = ../../Animals/Donkey.png; sourceTree = "<group>"; };
+		EB8D460F19546F2000D8B8FD /* Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dog.png; path = ../../Animals/Dog.png; sourceTree = "<group>"; };
+		EB8D461019546F2000D8B8FD /* Cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cat.png; path = ../../Animals/Cat.png; sourceTree = "<group>"; };
+		EB8D461119546F2000D8B8FD /* Goose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Goose.png; path = ../../Animals/Goose.png; sourceTree = "<group>"; };
+		EB8D461219546F2000D8B8FD /* Pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pig.png; path = ../../Animals/Pig.png; sourceTree = "<group>"; };
+		EB8D461319546F2000D8B8FD /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Horse.png; path = ../../Animals/Horse.png; sourceTree = "<group>"; };
+		EB8D461419546F2000D8B8FD /* Goat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Goat.png; path = ../../Animals/Goat.png; sourceTree = "<group>"; };
+		EB8D461519546F2000D8B8FD /* Chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chicken.png; path = ../../Animals/Chicken.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB723F8D195437EF0071E80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723F96195437EF0071E80C /* CoreGraphics.framework in Frameworks */,
+				EB723F98195437EF0071E80C /* UIKit.framework in Frameworks */,
+				EB723F94195437EF0071E80C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB723FAE195437F00071E80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723FB3195437F00071E80C /* XCTest.framework in Frameworks */,
+				EB723FB5195437F00071E80C /* UIKit.framework in Frameworks */,
+				EB723FB4195437F00071E80C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB723F87195437EF0071E80C = {
+			isa = PBXGroup;
+			children = (
+				EB723F99195437EF0071E80C /* Koehandel */,
+				EB723FB8195437F00071E80C /* KoehandelTests */,
+				EB723F92195437EF0071E80C /* Frameworks */,
+				EB723F91195437EF0071E80C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB723F91195437EF0071E80C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB723F90195437EF0071E80C /* Koehandel.app */,
+				EB723FB1195437F00071E80C /* KoehandelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB723F92195437EF0071E80C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB723F93195437EF0071E80C /* Foundation.framework */,
+				EB723F95195437EF0071E80C /* CoreGraphics.framework */,
+				EB723F97195437EF0071E80C /* UIKit.framework */,
+				EB723FB2195437F00071E80C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB723F99195437EF0071E80C /* Koehandel */ = {
+			isa = PBXGroup;
+			children = (
+				EB723FA5195437EF0071E80C /* Main.storyboard */,
+				EB11ACF819586002006AEF49 /* XYZNewGameViewController.h */,
+				EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */,
+				EB723FA8195437EF0071E80C /* XYZAuctionViewController.h */,
+				EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */,
+				EB723FA2195437EF0071E80C /* XYZAppDelegate.h */,
+				EB723FA3195437EF0071E80C /* XYZAppDelegate.m */,
+				EB723FC81954384C0071E80C /* XYZPlayer.h */,
+				EB723FC91954384C0071E80C /* XYZPlayer.m */,
+				EB723FCB1954449C0071E80C /* XYZDeck.h */,
+				EB723FCC1954449C0071E80C /* XYZDeck.m */,
+				EB723FCE195444F40071E80C /* XYZCard.h */,
+				EB723FCF195444F40071E80C /* XYZCard.m */,
+				EB11ACF1195817B1006AEF49 /* XYZGameplay.h */,
+				EB11ACF2195817B1006AEF49 /* XYZGameplay.m */,
+				EB723FAB195437EF0071E80C /* Images.xcassets */,
+				EB723F9A195437EF0071E80C /* Supporting Files */,
+			);
+			path = Koehandel;
+			sourceTree = "<group>";
+		};
+		EB723F9A195437EF0071E80C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB11ACF4195830F7006AEF49 /* card-border.png */,
+				EB11ACF5195830F7006AEF49 /* card-back.png */,
+				EB723F9B195437EF0071E80C /* Koehandel-Info.plist */,
+				EB8D462019546F3700D8B8FD /* Animals */,
+				EB723F9C195437EF0071E80C /* InfoPlist.strings */,
+				EB723F9F195437EF0071E80C /* main.m */,
+				EB723FA1195437EF0071E80C /* Koehandel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB723FB8195437F00071E80C /* KoehandelTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB723FBE195437F00071E80C /* KoehandelTests.m */,
+				EB723FB9195437F00071E80C /* Supporting Files */,
+			);
+			path = KoehandelTests;
+			sourceTree = "<group>";
+		};
+		EB723FB9195437F00071E80C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB723FBA195437F00071E80C /* KoehandelTests-Info.plist */,
+				EB723FBB195437F00071E80C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB8D462019546F3700D8B8FD /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D460C19546F2000D8B8FD /* Cow.png */,
+				EB8D460D19546F2000D8B8FD /* Sheep.png */,
+				EB8D460E19546F2000D8B8FD /* Donkey.png */,
+				EB8D460F19546F2000D8B8FD /* Dog.png */,
+				EB8D461019546F2000D8B8FD /* Cat.png */,
+				EB8D461119546F2000D8B8FD /* Goose.png */,
+				EB8D461219546F2000D8B8FD /* Pig.png */,
+				EB8D461319546F2000D8B8FD /* Horse.png */,
+				EB8D461419546F2000D8B8FD /* Goat.png */,
+				EB8D461519546F2000D8B8FD /* Chicken.png */,
+			);
+			name = Animals;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB723F8F195437EF0071E80C /* Koehandel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB723FC2195437F00071E80C /* Build configuration list for PBXNativeTarget "Koehandel" */;
+			buildPhases = (
+				EB723F8C195437EF0071E80C /* Sources */,
+				EB723F8D195437EF0071E80C /* Frameworks */,
+				EB723F8E195437EF0071E80C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Koehandel;
+			productName = Koehandel;
+			productReference = EB723F90195437EF0071E80C /* Koehandel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB723FB0195437F00071E80C /* KoehandelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB723FC5195437F00071E80C /* Build configuration list for PBXNativeTarget "KoehandelTests" */;
+			buildPhases = (
+				EB723FAD195437F00071E80C /* Sources */,
+				EB723FAE195437F00071E80C /* Frameworks */,
+				EB723FAF195437F00071E80C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB723FB7195437F00071E80C /* PBXTargetDependency */,
+			);
+			name = KoehandelTests;
+			productName = KoehandelTests;
+			productReference = EB723FB1195437F00071E80C /* KoehandelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB723F88195437EF0071E80C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XYZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = bjvanlinschoten;
+				TargetAttributes = {
+					EB723FB0195437F00071E80C = {
+						TestTargetID = EB723F8F195437EF0071E80C;
+					};
+				};
+			};
+			buildConfigurationList = EB723F8B195437EF0071E80C /* Build configuration list for PBXProject "Koehandel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB723F87195437EF0071E80C;
+			productRefGroup = EB723F91195437EF0071E80C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB723F8F195437EF0071E80C /* Koehandel */,
+				EB723FB0195437F00071E80C /* KoehandelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB723F8E195437EF0071E80C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723FAC195437EF0071E80C /* Images.xcassets in Resources */,
+				EB8D461F19546F2000D8B8FD /* Chicken.png in Resources */,
+				EB8D461B19546F2000D8B8FD /* Goose.png in Resources */,
+				EB723F9E195437EF0071E80C /* InfoPlist.strings in Resources */,
+				EB8D461A19546F2000D8B8FD /* Cat.png in Resources */,
+				EB8D461919546F2000D8B8FD /* Dog.png in Resources */,
+				EB11ACF7195830F7006AEF49 /* card-back.png in Resources */,
+				EB8D461719546F2000D8B8FD /* Sheep.png in Resources */,
+				EB8D461E19546F2000D8B8FD /* Goat.png in Resources */,
+				EB8D461819546F2000D8B8FD /* Donkey.png in Resources */,
+				EB723FA7195437EF0071E80C /* Main.storyboard in Resources */,
+				EB8D461D19546F2000D8B8FD /* Horse.png in Resources */,
+				EB8D461C19546F2000D8B8FD /* Pig.png in Resources */,
+				EB8D461619546F2000D8B8FD /* Cow.png in Resources */,
+				EB11ACF6195830F7006AEF49 /* card-border.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB723FAF195437F00071E80C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723FBD195437F00071E80C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB723F8C195437EF0071E80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */,
+				EB723FD0195444F40071E80C /* XYZCard.m in Sources */,
+				EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */,
+				EB11ACFA19586002006AEF49 /* XYZNewGameViewController.m in Sources */,
+				EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */,
+				EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */,
+				EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */,
+				EB723FA0195437EF0071E80C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB723FAD195437F00071E80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB723FBF195437F00071E80C /* KoehandelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB723FB7195437F00071E80C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB723F8F195437EF0071E80C /* Koehandel */;
+			targetProxy = EB723FB6195437F00071E80C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB723F9C195437EF0071E80C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB723F9D195437EF0071E80C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EB723FA5195437EF0071E80C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB723FA6195437EF0071E80C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB723FBB195437F00071E80C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB723FBC195437F00071E80C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB723FC0195437F00071E80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB723FC1195437F00071E80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB723FC3195437F00071E80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Koehandel/Koehandel-Prefix.pch";
+				INFOPLIST_FILE = "Koehandel/Koehandel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB723FC4195437F00071E80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Koehandel/Koehandel-Prefix.pch";
+				INFOPLIST_FILE = "Koehandel/Koehandel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EB723FC6195437F00071E80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Koehandel.app/Koehandel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Koehandel/Koehandel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KoehandelTests/KoehandelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EB723FC7195437F00071E80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Koehandel.app/Koehandel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Koehandel/Koehandel-Prefix.pch";
+				INFOPLIST_FILE = "KoehandelTests/KoehandelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB723F8B195437EF0071E80C /* Build configuration list for PBXProject "Koehandel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB723FC0195437F00071E80C /* Debug */,
+				EB723FC1195437F00071E80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB723FC2195437F00071E80C /* Build configuration list for PBXNativeTarget "Koehandel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB723FC3195437F00071E80C /* Debug */,
+				EB723FC4195437F00071E80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB723FC5195437F00071E80C /* Build configuration list for PBXNativeTarget "KoehandelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB723FC6195437F00071E80C /* Debug */,
+				EB723FC7195437F00071E80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB723F88195437EF0071E80C /* Project object */;
+}
