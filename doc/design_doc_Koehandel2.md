@@ -1,4 +1,4 @@
-####Classes
+###Classes
 
 * Card  
 	* Properties:  
@@ -37,7 +37,7 @@
 
 
 
-####View Controllers
+###View Controllers
 
 - NewGameViewController  
 	Screen where players input there name and start a new game
@@ -53,7 +53,7 @@
 
 
 
-####How the game is played
+###How the game is played
 
 The game is played offline and with 3 players. Player’s turn. He chooses to auction or trade.   
 
