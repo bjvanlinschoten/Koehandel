@@ -1,7 +1,6 @@
 ####Classes
 
 * Card  
-Represents a card  
 	* Properties:  
 		- animal: represents the animal on the card  
 		- value: represents the value of the animal
@@ -9,7 +8,6 @@ Represents a card
 		- initWithValue: initializes the card with a value and an animal
 
 * Deck  
-	Represents a deck of cards  
 	* Properties:  
 		- cards: NSMutableArray with all the cards in the deck  
 	* Methods:  
@@ -17,7 +15,6 @@ Represents a card
 		- draw: draws a card an remove it from the deck  
 
 * Player  
-	Represents a player  
 	* Properties:  
 		- moneyCards: NSMutableArray of all money cards the player possesses  
 		- animalCards: NSMutableArray of all animal cards the player possesses  
@@ -28,7 +25,6 @@ Represents a card
 		- initWithName: initializes a player with correct starting amount of money and the players name  
 
 * Gameplay  
-	Controls the gameplay  
 	* Properties:  
 		- Players: objects from the player class  
 		- currentPlayer: the player whose turn it is  
