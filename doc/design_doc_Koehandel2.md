@@ -66,7 +66,9 @@ The player selects the opposite player and the animal he wants to bid for. He th
 Players need to be able to see there stats at all times. Animals (and thus score) are open; everyone can see the distribution of the animals. For the money this is a bit different. The amount of money cards is open, but the total amount is hidden. This is shown by holding down finger on money cards digit (Optional: input 3 digit password to avoid dirty play).  
 
 
+###Mockups
 
+See the mockups PNG in this directory
 
 
 
