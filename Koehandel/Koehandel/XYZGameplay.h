@@ -9,19 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "XYZCard.h"
 #import "XYZPlayer.h"
+#import "XYZDeck.h"
 
 @interface XYZGameplay : NSObject
 
-@property XYZPlayer *player1;
-@property XYZPlayer *player2;
-@property XYZPlayer *player3;
+@property (strong, nonatomic) NSMutableArray *players;
 @property XYZPlayer *currentPlayer;
-@property XYZPlayer *waitingPlayer1;
-@property XYZPlayer *waitingPlayer2;
+@property (strong, nonatomic) NSMutableArray *waitingPlayers;
 @property XYZPlayer *buyer;
 @property XYZCard *currentCard;
+@property NSInteger amountOfPlayers;
+@property XYZDeck *deck;
 
--(void) auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)playerBought;
-
+-(BOOL) auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)playerBought;
+-(void) nextTurn;
+-(NSMutableArray *)determineMutualAnimals;
 
 @end

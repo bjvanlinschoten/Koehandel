@@ -10,7 +10,7 @@
 		EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = EB11ACF2195817B1006AEF49 /* XYZGameplay.m */; };
 		EB11ACF6195830F7006AEF49 /* card-border.png in Resources */ = {isa = PBXBuildFile; fileRef = EB11ACF4195830F7006AEF49 /* card-border.png */; };
 		EB11ACF7195830F7006AEF49 /* card-back.png in Resources */ = {isa = PBXBuildFile; fileRef = EB11ACF5195830F7006AEF49 /* card-back.png */; };
-		EB11ACFA19586002006AEF49 /* XYZNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */; };
+		EB11AD411959B1D2006AEF49 /* XYZTradingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB11AD401959B1D2006AEF49 /* XYZTradingViewController.m */; };
 		EB723F94195437EF0071E80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F93195437EF0071E80C /* Foundation.framework */; };
 		EB723F96195437EF0071E80C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F95195437EF0071E80C /* CoreGraphics.framework */; };
 		EB723F98195437EF0071E80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB723F97195437EF0071E80C /* UIKit.framework */; };
@@ -28,6 +28,8 @@
 		EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FC91954384C0071E80C /* XYZPlayer.m */; };
 		EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCC1954449C0071E80C /* XYZDeck.m */; };
 		EB723FD0195444F40071E80C /* XYZCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCF195444F40071E80C /* XYZCard.m */; };
+		EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */; };
+		EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */; };
 		EB8D461619546F2000D8B8FD /* Cow.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460C19546F2000D8B8FD /* Cow.png */; };
 		EB8D461719546F2000D8B8FD /* Sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460D19546F2000D8B8FD /* Sheep.png */; };
 		EB8D461819546F2000D8B8FD /* Donkey.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460E19546F2000D8B8FD /* Donkey.png */; };
@@ -55,8 +57,8 @@
 		EB11ACF2195817B1006AEF49 /* XYZGameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZGameplay.m; sourceTree = "<group>"; };
 		EB11ACF4195830F7006AEF49 /* card-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-border.png"; path = "../../card-border.png"; sourceTree = "<group>"; };
 		EB11ACF5195830F7006AEF49 /* card-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-back.png"; path = "../../card-back.png"; sourceTree = "<group>"; };
-		EB11ACF819586002006AEF49 /* XYZNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNewGameViewController.h; sourceTree = "<group>"; };
-		EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZNewGameViewController.m; sourceTree = "<group>"; };
+		EB11AD3F1959B1D2006AEF49 /* XYZTradingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTradingViewController.h; sourceTree = "<group>"; };
+		EB11AD401959B1D2006AEF49 /* XYZTradingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTradingViewController.m; sourceTree = "<group>"; };
 		EB723F90195437EF0071E80C /* Koehandel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koehandel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB723F93195437EF0071E80C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB723F95195437EF0071E80C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,10 @@
 		EB723FCC1954449C0071E80C /* XYZDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZDeck.m; sourceTree = "<group>"; };
 		EB723FCE195444F40071E80C /* XYZCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCard.h; sourceTree = "<group>"; };
 		EB723FCF195444F40071E80C /* XYZCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCard.m; sourceTree = "<group>"; };
+		EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTabBarViewController.h; sourceTree = "<group>"; };
+		EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTabBarViewController.m; sourceTree = "<group>"; };
+		EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBiddingViewController.h; sourceTree = "<group>"; };
+		EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBiddingViewController.m; sourceTree = "<group>"; };
 		EB8D460C19546F2000D8B8FD /* Cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cow.png; path = ../../Animals/Cow.png; sourceTree = "<group>"; };
 		EB8D460D19546F2000D8B8FD /* Sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sheep.png; path = ../../Animals/Sheep.png; sourceTree = "<group>"; };
 		EB8D460E19546F2000D8B8FD /* Donkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Donkey.png; path = ../../Animals/Donkey.png; sourceTree = "<group>"; };
@@ -152,8 +158,12 @@
 			isa = PBXGroup;
 			children = (
 				EB723FA5195437EF0071E80C /* Main.storyboard */,
-				EB11ACF819586002006AEF49 /* XYZNewGameViewController.h */,
-				EB11ACF919586002006AEF49 /* XYZNewGameViewController.m */,
+				EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */,
+				EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */,
+				EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */,
+				EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */,
+				EB11AD3F1959B1D2006AEF49 /* XYZTradingViewController.h */,
+				EB11AD401959B1D2006AEF49 /* XYZTradingViewController.m */,
 				EB723FA8195437EF0071E80C /* XYZAuctionViewController.h */,
 				EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */,
 				EB723FA2195437EF0071E80C /* XYZAppDelegate.h */,
@@ -334,9 +344,11 @@
 				EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */,
 				EB723FD0195444F40071E80C /* XYZCard.m in Sources */,
 				EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */,
-				EB11ACFA19586002006AEF49 /* XYZNewGameViewController.m in Sources */,
 				EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */,
+				EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */,
 				EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */,
+				EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */,
+				EB11AD411959B1D2006AEF49 /* XYZTradingViewController.m in Sources */,
 				EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */,
 				EB723FA0195437EF0071E80C /* main.m in Sources */,
 			);

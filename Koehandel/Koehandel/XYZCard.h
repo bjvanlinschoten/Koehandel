@@ -23,8 +23,8 @@ typedef enum{
 
 @interface XYZCard : NSObject
 
-@property Animal animal;
+@property NSString *animal;
 @property NSInteger value;
 
--(id) initWithValue:(NSInteger) aValue Animal:(Animal) aAnimal;
+-(id) initWithValue:(NSInteger)Value Animal:(NSString *)Animal;
 @end

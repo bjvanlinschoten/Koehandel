@@ -13,14 +13,16 @@
 - (id) init {
 	if(self = [super init]) {
 		self.cards = [[NSMutableArray alloc] init];
+        self.animals = [[NSMutableArray alloc] initWithObjects:@"Chicken", @"Goose", @"Cat", @"Dog", @"Sheep", @"Goat", @"Donkey", @"Pig", @"Cow", @"Horse", nil];
+        self.animalDict = [[NSMutableDictionary alloc] init];
         NSInteger values[10] = {10, 40, 90, 160, 250, 350, 500, 650, 800, 1000};
-        Animal animals[10] = {Chicken, Goose, Cat, Dog, Sheep, Goat, Donkey, Pig, Cow, Horse};
         
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 4; j++) {
-                XYZCard *card = [[XYZCard alloc] initWithValue:values[i] Animal:animals[i]];
+                XYZCard *card = [[XYZCard alloc] initWithValue:values[i] Animal:[self.animals objectAtIndex:i]];
                 [self.cards addObject:card];
             }
+            [self.animalDict setValue:[NSNumber numberWithInt:i] forKey:[self.animals objectAtIndex:i]];
         }
     }
     [self shuffle];

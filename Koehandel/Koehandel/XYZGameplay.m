@@ -10,7 +10,18 @@
 
 @implementation XYZGameplay
 
--(void)auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)buyer {
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.players = [[NSMutableArray alloc] init];
+        self.waitingPlayers = [[NSMutableArray alloc] init];
+        self.deck = [[XYZDeck alloc] init];
+    }
+    return self;
+}
+
+-(BOOL)auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)buyer {
     if ([buyer getTotalMoney] > amount) {
         int possibleMoneyCards[6] = {0, 10, 50, 100, 200, 500};
         int i = 5;
@@ -34,9 +45,49 @@
                 i--;
             }
         }
-        
-        buyer.animalCards[cardSold.animal] = [NSNumber numberWithInt:[buyer.animalCards[cardSold.animal] integerValue] + 1];
+        int animalIndex;
+        for (int i = 0; i < 10; i++) {
+            if ([[self.deck.animals objectAtIndex:i] isEqualToString:cardSold.animal]) {
+                animalIndex = i;
+                break;
+            }
+        }
+        buyer.animalCards[animalIndex] = [NSNumber numberWithInt:[buyer.animalCards[animalIndex] integerValue] + 1];
+        return true;
     }
+    else {
+        return false;
+    }
+}
+
+-(void)nextTurn {
+    XYZPlayer *tempPlayer = [XYZPlayer alloc];
+    tempPlayer = self.currentPlayer;
+    self.currentPlayer = [self.waitingPlayers objectAtIndex:0];
+    [self.waitingPlayers removeObjectAtIndex:0];
+    [self.waitingPlayers addObject:tempPlayer];
+}
+
+-(NSMutableArray *)determineMutualAnimals {
+    NSMutableArray *mutualAnimals = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [self.waitingPlayers count]; i++) {
+        NSMutableArray *mutualAnimalsWithPlayerI = [[NSMutableArray alloc] init];
+        for (int j = 0; j < 10; j++) {
+            if ([[[[self.waitingPlayers objectAtIndex:i] animalCards] objectAtIndex:j] integerValue] == 1 &&
+                [[[self.currentPlayer animalCards] objectAtIndex:j] integerValue] > 0) {
+                [mutualAnimalsWithPlayerI addObject:[[NSArray alloc] initWithObjects:[self.deck.animals objectAtIndex:j], [NSNumber numberWithInt:1], nil]];
+            }
+            else if ([[[[self.waitingPlayers objectAtIndex:i] animalCards] objectAtIndex:j] integerValue] == 2 &&
+                     [[[self.currentPlayer animalCards] objectAtIndex:j] integerValue] >= 2) {
+                [mutualAnimalsWithPlayerI addObject:[[NSArray alloc] initWithObjects:[self.deck.animals objectAtIndex:j], [NSNumber numberWithInt:2], nil]];
+            }
+        }
+        if ([mutualAnimalsWithPlayerI count] > 0) {
+            [mutualAnimalsWithPlayerI addObject:[self.waitingPlayers objectAtIndex:i]];
+            [mutualAnimals addObject:mutualAnimalsWithPlayerI];
+        }
+    }
+    return mutualAnimals;
 }
 
 

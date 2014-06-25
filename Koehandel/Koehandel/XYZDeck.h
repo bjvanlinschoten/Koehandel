@@ -12,6 +12,8 @@
 @interface XYZDeck : NSObject
 
 @property NSMutableArray *cards;
+@property NSMutableArray *animals;
+@property NSMutableDictionary *animalDict;
 
 - (void) shuffle;
 - (XYZCard *) draw;

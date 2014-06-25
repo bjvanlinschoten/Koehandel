@@ -11,10 +11,10 @@
 @implementation XYZCard
 
 
-- (id) initWithValue:(NSInteger) aValue Animal:(Animal) aAnimal {
+- (id) initWithValue:(NSInteger)value Animal:(NSString *)animal {
 	if(self = [super init]) {
-		self.value = aValue;
-		self.animal = aAnimal;
+		self.value = value;
+		self.animal = animal;
 	}
 	return self;
 }

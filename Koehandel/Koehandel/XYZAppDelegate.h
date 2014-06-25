@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYZDeck.h"
+#import "XYZCard.h"
+#import "XYZPlayer.h"
+#import "XYZGameplay.h"
 
 @interface XYZAppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -15,13 +15,13 @@
     self = [super init];
     if (self) {
         self.name = name;
-        self.moneyCards = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:3],[NSNumber numberWithInt:1], nil];
+        self.moneyCards = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:4],[NSNumber numberWithInt:1], nil];
         self.animalCards = [[NSMutableArray alloc] init];
         for (int i = 0; i < 3; i++){
             [self.moneyCards addObject:[NSNumber numberWithInt:0]];
         }
         for (int i = 0; i < 10; i++){
-            [self.animalCards addObject:[NSNumber numberWithInt:0]];
+            [self.animalCards addObject:[NSNumber numberWithInt:2]];
         }
     }
     return self;
