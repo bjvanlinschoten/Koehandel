@@ -21,6 +21,12 @@
 @property NSInteger amountOfPlayers;
 @property XYZDeck *deck;
 
+@property NSMutableArray *tradeBids;
+@property NSInteger bidCounter;
+@property XYZPlayer *tradeEnemy;
+@property NSInteger amountOfAnimalsForTrade;
+@property NSString *animalForTrade;
+
 -(BOOL) auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)playerBought;
 -(void) nextTurn;
 -(NSMutableArray *)determineMutualAnimals;

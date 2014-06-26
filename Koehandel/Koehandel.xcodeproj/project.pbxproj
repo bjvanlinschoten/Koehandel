@@ -40,6 +40,12 @@
 		EB8D461D19546F2000D8B8FD /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461319546F2000D8B8FD /* Horse.png */; };
 		EB8D461E19546F2000D8B8FD /* Goat.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461419546F2000D8B8FD /* Goat.png */; };
 		EB8D461F19546F2000D8B8FD /* Chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D461519546F2000D8B8FD /* Chicken.png */; };
+		EBE783D0195C1BD7005AB75F /* moneybag0.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CA195C1BD7005AB75F /* moneybag0.png */; };
+		EBE783D1195C1BD7005AB75F /* moneybag10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CB195C1BD7005AB75F /* moneybag10.png */; };
+		EBE783D2195C1BD7005AB75F /* moneybag50.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CC195C1BD7005AB75F /* moneybag50.png */; };
+		EBE783D3195C1BD7005AB75F /* moneybag100.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CD195C1BD7005AB75F /* moneybag100.png */; };
+		EBE783D4195C1BD7005AB75F /* moneybag200.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CE195C1BD7005AB75F /* moneybag200.png */; };
+		EBE783D5195C1BD7005AB75F /* moneybag500.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CF195C1BD7005AB75F /* moneybag500.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +104,12 @@
 		EB8D461319546F2000D8B8FD /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Horse.png; path = ../../Animals/Horse.png; sourceTree = "<group>"; };
 		EB8D461419546F2000D8B8FD /* Goat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Goat.png; path = ../../Animals/Goat.png; sourceTree = "<group>"; };
 		EB8D461519546F2000D8B8FD /* Chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chicken.png; path = ../../Animals/Chicken.png; sourceTree = "<group>"; };
+		EBE783CA195C1BD7005AB75F /* moneybag0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag0.png; path = ../../moneybag0.png; sourceTree = "<group>"; };
+		EBE783CB195C1BD7005AB75F /* moneybag10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag10.png; path = ../../moneybag10.png; sourceTree = "<group>"; };
+		EBE783CC195C1BD7005AB75F /* moneybag50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag50.png; path = ../../moneybag50.png; sourceTree = "<group>"; };
+		EBE783CD195C1BD7005AB75F /* moneybag100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag100.png; path = ../../moneybag100.png; sourceTree = "<group>"; };
+		EBE783CE195C1BD7005AB75F /* moneybag200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag200.png; path = ../../moneybag200.png; sourceTree = "<group>"; };
+		EBE783CF195C1BD7005AB75F /* moneybag500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag500.png; path = ../../moneybag500.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +197,12 @@
 		EB723F9A195437EF0071E80C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBE783CA195C1BD7005AB75F /* moneybag0.png */,
+				EBE783CB195C1BD7005AB75F /* moneybag10.png */,
+				EBE783CC195C1BD7005AB75F /* moneybag50.png */,
+				EBE783CD195C1BD7005AB75F /* moneybag100.png */,
+				EBE783CE195C1BD7005AB75F /* moneybag200.png */,
+				EBE783CF195C1BD7005AB75F /* moneybag500.png */,
 				EB11ACF4195830F7006AEF49 /* card-border.png */,
 				EB11ACF5195830F7006AEF49 /* card-back.png */,
 				EB723F9B195437EF0071E80C /* Koehandel-Info.plist */,
@@ -310,14 +328,20 @@
 			files = (
 				EB723FAC195437EF0071E80C /* Images.xcassets in Resources */,
 				EB8D461F19546F2000D8B8FD /* Chicken.png in Resources */,
+				EBE783D0195C1BD7005AB75F /* moneybag0.png in Resources */,
+				EBE783D3195C1BD7005AB75F /* moneybag100.png in Resources */,
 				EB8D461B19546F2000D8B8FD /* Goose.png in Resources */,
+				EBE783D1195C1BD7005AB75F /* moneybag10.png in Resources */,
+				EBE783D4195C1BD7005AB75F /* moneybag200.png in Resources */,
 				EB723F9E195437EF0071E80C /* InfoPlist.strings in Resources */,
 				EB8D461A19546F2000D8B8FD /* Cat.png in Resources */,
 				EB8D461919546F2000D8B8FD /* Dog.png in Resources */,
 				EB11ACF7195830F7006AEF49 /* card-back.png in Resources */,
+				EBE783D5195C1BD7005AB75F /* moneybag500.png in Resources */,
 				EB8D461719546F2000D8B8FD /* Sheep.png in Resources */,
 				EB8D461E19546F2000D8B8FD /* Goat.png in Resources */,
 				EB8D461819546F2000D8B8FD /* Donkey.png in Resources */,
+				EBE783D2195C1BD7005AB75F /* moneybag50.png in Resources */,
 				EB723FA7195437EF0071E80C /* Main.storyboard in Resources */,
 				EB8D461D19546F2000D8B8FD /* Horse.png in Resources */,
 				EB8D461C19546F2000D8B8FD /* Pig.png in Resources */,

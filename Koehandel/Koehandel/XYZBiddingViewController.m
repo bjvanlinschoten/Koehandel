@@ -13,7 +13,9 @@
 @end
 
 @implementation XYZBiddingViewController
-@synthesize totalAmountLabel;
+
+@synthesize totalAmountLabel, amountCardsLabels, cardSteppers, playerLabel;
+NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +29,46 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.gp.bidCounter++;
+    
+    if (self.gp.bidCounter == 1) {
+        self.bidder = self.gp.currentPlayer;
+    }
+    else if (self.gp.bidCounter == 2) {
+        self.bidder = self.gp.tradeEnemy;
+    }
+    
+    self.playerLabel.text = [NSString stringWithFormat:@"%@ make your bet!", self.bidder.name];
+
+    
+    // sort amountCardsLabels by y-coordinate
+    self.amountCardsLabels = [self.amountCardsLabels sortedArrayUsingComparator:^NSComparisonResult(id label1, id label2) {
+        if ([label1 frame].origin.y < [label2 frame].origin.y) return NSOrderedAscending;
+        else if ([label1 frame].origin.y > [label2 frame].origin.y) return NSOrderedDescending;
+        else return NSOrderedSame;
+    }];
+    
+    // sort cardSteppers by y-coordinate
+    self.cardSteppers = [self.cardSteppers sortedArrayUsingComparator:^NSComparisonResult(id label1, id label2) {
+        if ([label1 frame].origin.y < [label2 frame].origin.y) return NSOrderedAscending;
+        else if ([label1 frame].origin.y > [label2 frame].origin.y) return NSOrderedDescending;
+        else return NSOrderedSame;
+    }];
+    
+    for (int i = 0; i < 6; i++) {
+        if ([[self.bidder.moneyCards objectAtIndex:i] integerValue] == 0) {
+            [[self.amountCardsLabels objectAtIndex:i] setText:[NSString stringWithFormat:@"No cards with value %d!", moneyValues[i]]];
+            [[self.cardSteppers objectAtIndex:i] setHidden: YES];
+        }
+        else {
+            [(UIStepper *)[self.cardSteppers objectAtIndex:i] setMaximumValue:[[self.bidder.moneyCards objectAtIndex:i] floatValue]];
+        }
+    }
+    
+    self.totalAmount = 0;
+    self.totalAmountLabel.text = @"Total amount: 0";
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,5 +87,42 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)stepperValueChanged:(id)sender {
+    int index = 0;
+    self.totalAmount = 0;
+    for (int i = 0; i < 6; i++){
+        self.totalAmount += (int)[(UIStepper *)[self.cardSteppers objectAtIndex:i] value] * moneyValues[i];
+        if (sender == [self.cardSteppers objectAtIndex:i]) {
+            index = i;
+            break;
+        }
+    }
+    int stepperValue = (int)[(UIStepper *)[self.cardSteppers objectAtIndex:index] value];
+    NSString *tempString;
+    if (stepperValue == 1) {
+        tempString = @"card";
+    }
+    else {
+        tempString = @"cards";
+    }
+    [[self.amountCardsLabels objectAtIndex:index] setText:[NSString stringWithFormat:@"%d %@ with value %d", stepperValue, tempString, moneyValues[index]]];
+    self.totalAmountLabel.text = [NSString stringWithFormat:@"Total amount: %d", self.totalAmount];
+}
+
+- (IBAction)placeBet:(id)sender {
+    [self.gp.tradeBids addObject:[NSNumber numberWithInteger:self.totalAmount]];
+    if (self.gp.bidCounter == 1) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        XYZBiddingViewController *bvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZBiddingViewController"];
+        bvc.gp = self.gp;
+        [bvc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self presentViewController:bvc animated:YES completion:nil];
+    }
+    else {
+        [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
 
 @end

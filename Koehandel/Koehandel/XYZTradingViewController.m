@@ -130,10 +130,11 @@
     XYZBiddingViewController *bvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZBiddingViewController"];
     //XYZBiddingViewController *bvc = [[XYZBiddingViewController alloc] init];
     bvc.gp = self.gp;
-    bvc.attacker = self.gp.currentPlayer;
-    bvc.defender = [[self.mutualAnimals objectAtIndex:[tradePicker selectedRowInComponent:0]] lastObject];
-    bvc.animal = [[[self.mutualAnimals objectAtIndex:[tradePicker selectedRowInComponent:0]] objectAtIndex:[tradePicker selectedRowInComponent:1]] objectAtIndex:0];
-    bvc.amount = [tradePicker selectedRowInComponent:2] + 1;
+    self.gp.tradeBids = [[NSMutableArray alloc] init];
+    self.gp.bidCounter = 0;
+    self.gp.tradeEnemy = [[self.mutualAnimals objectAtIndex:[tradePicker selectedRowInComponent:0]] lastObject];
+    self.gp.animalForTrade = [[[self.mutualAnimals objectAtIndex:[tradePicker selectedRowInComponent:0]] objectAtIndex:[tradePicker selectedRowInComponent:1]] objectAtIndex:0];
+    self.gp.amountOfAnimalsForTrade = [tradePicker selectedRowInComponent:2] + 1;
     [bvc setModalPresentationStyle:UIModalPresentationFullScreen];
     [self presentViewController:bvc animated:YES completion:nil];
 }
