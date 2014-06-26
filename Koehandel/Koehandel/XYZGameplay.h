@@ -30,5 +30,6 @@
 -(BOOL) auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)playerBought;
 -(void) nextTurn;
 -(NSMutableArray *)determineMutualAnimals;
+-(XYZPlayer *) trade;
 
 @end

@@ -46,6 +46,11 @@
 		EBE783D3195C1BD7005AB75F /* moneybag100.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CD195C1BD7005AB75F /* moneybag100.png */; };
 		EBE783D4195C1BD7005AB75F /* moneybag200.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CE195C1BD7005AB75F /* moneybag200.png */; };
 		EBE783D5195C1BD7005AB75F /* moneybag500.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE783CF195C1BD7005AB75F /* moneybag500.png */; };
+		EBE783D8195C5201005AB75F /* XYZConfirmBidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783D7195C5201005AB75F /* XYZConfirmBidViewController.m */; };
+		EBE783DB195C6250005AB75F /* XYZTradeResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783DA195C6250005AB75F /* XYZTradeResultViewController.m */; };
+		EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */; };
+		EBE783E4195C6C1B005AB75F /* XYZStatsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */; };
+		EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,16 @@
 		EBE783CD195C1BD7005AB75F /* moneybag100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag100.png; path = ../../moneybag100.png; sourceTree = "<group>"; };
 		EBE783CE195C1BD7005AB75F /* moneybag200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag200.png; path = ../../moneybag200.png; sourceTree = "<group>"; };
 		EBE783CF195C1BD7005AB75F /* moneybag500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moneybag500.png; path = ../../moneybag500.png; sourceTree = "<group>"; };
+		EBE783D6195C5200005AB75F /* XYZConfirmBidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZConfirmBidViewController.h; sourceTree = "<group>"; };
+		EBE783D7195C5201005AB75F /* XYZConfirmBidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZConfirmBidViewController.m; sourceTree = "<group>"; };
+		EBE783D9195C6250005AB75F /* XYZTradeResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTradeResultViewController.h; sourceTree = "<group>"; };
+		EBE783DA195C6250005AB75F /* XYZTradeResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTradeResultViewController.m; sourceTree = "<group>"; };
+		EBE783DF195C6B8E005AB75F /* XYZStatsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsPageViewController.h; sourceTree = "<group>"; };
+		EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsPageViewController.m; sourceTree = "<group>"; };
+		EBE783E2195C6C1B005AB75F /* XYZStatsContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZStatsContentViewController.h; path = ../XYZStatsContentViewController.h; sourceTree = "<group>"; };
+		EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZStatsContentViewController.m; path = ../XYZStatsContentViewController.m; sourceTree = "<group>"; };
+		EBE783E9195C743B005AB75F /* XYZStatsDataSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsDataSourceViewController.h; sourceTree = "<group>"; };
+		EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsDataSourceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,24 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				EB723FA5195437EF0071E80C /* Main.storyboard */,
-				EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */,
-				EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */,
-				EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */,
-				EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */,
-				EB11AD3F1959B1D2006AEF49 /* XYZTradingViewController.h */,
-				EB11AD401959B1D2006AEF49 /* XYZTradingViewController.m */,
-				EB723FA8195437EF0071E80C /* XYZAuctionViewController.h */,
-				EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */,
 				EB723FA2195437EF0071E80C /* XYZAppDelegate.h */,
 				EB723FA3195437EF0071E80C /* XYZAppDelegate.m */,
-				EB723FC81954384C0071E80C /* XYZPlayer.h */,
-				EB723FC91954384C0071E80C /* XYZPlayer.m */,
-				EB723FCB1954449C0071E80C /* XYZDeck.h */,
-				EB723FCC1954449C0071E80C /* XYZDeck.m */,
-				EB723FCE195444F40071E80C /* XYZCard.h */,
-				EB723FCF195444F40071E80C /* XYZCard.m */,
-				EB11ACF1195817B1006AEF49 /* XYZGameplay.h */,
-				EB11ACF2195817B1006AEF49 /* XYZGameplay.m */,
+				EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */,
+				EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */,
+				EBE783E5195C6C29005AB75F /* Stats */,
+				EBE783E6195C6C36005AB75F /* Trade */,
+				EBE783E7195C6C41005AB75F /* Auction */,
+				EBE783E8195C6C5B005AB75F /* Gameplay classes */,
 				EB723FAB195437EF0071E80C /* Images.xcassets */,
 				EB723F9A195437EF0071E80C /* Supporting Files */,
 			);
@@ -247,6 +252,58 @@
 				EB8D461519546F2000D8B8FD /* Chicken.png */,
 			);
 			name = Animals;
+			sourceTree = "<group>";
+		};
+		EBE783E5195C6C29005AB75F /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				EBE783E9195C743B005AB75F /* XYZStatsDataSourceViewController.h */,
+				EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */,
+				EBE783DF195C6B8E005AB75F /* XYZStatsPageViewController.h */,
+				EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */,
+				EBE783E2195C6C1B005AB75F /* XYZStatsContentViewController.h */,
+				EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		EBE783E6195C6C36005AB75F /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				EBE783D9195C6250005AB75F /* XYZTradeResultViewController.h */,
+				EBE783DA195C6250005AB75F /* XYZTradeResultViewController.m */,
+				EBE783D6195C5200005AB75F /* XYZConfirmBidViewController.h */,
+				EBE783D7195C5201005AB75F /* XYZConfirmBidViewController.m */,
+				EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */,
+				EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */,
+				EB11AD3F1959B1D2006AEF49 /* XYZTradingViewController.h */,
+				EB11AD401959B1D2006AEF49 /* XYZTradingViewController.m */,
+			);
+			name = Trade;
+			sourceTree = "<group>";
+		};
+		EBE783E7195C6C41005AB75F /* Auction */ = {
+			isa = PBXGroup;
+			children = (
+				EB723FA8195437EF0071E80C /* XYZAuctionViewController.h */,
+				EB723FA9195437EF0071E80C /* XYZAuctionViewController.m */,
+			);
+			name = Auction;
+			sourceTree = "<group>";
+		};
+		EBE783E8195C6C5B005AB75F /* Gameplay classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB723FC81954384C0071E80C /* XYZPlayer.h */,
+				EB723FC91954384C0071E80C /* XYZPlayer.m */,
+				EB723FCB1954449C0071E80C /* XYZDeck.h */,
+				EB723FCC1954449C0071E80C /* XYZDeck.m */,
+				EB723FCE195444F40071E80C /* XYZCard.h */,
+				EB723FCF195444F40071E80C /* XYZCard.m */,
+				EB11ACF1195817B1006AEF49 /* XYZGameplay.h */,
+				EB11ACF2195817B1006AEF49 /* XYZGameplay.m */,
+			);
+			name = "Gameplay classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,10 +427,15 @@
 				EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */,
 				EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */,
 				EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */,
+				EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */,
+				EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */,
 				EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */,
+				EBE783DB195C6250005AB75F /* XYZTradeResultViewController.m in Sources */,
+				EBE783D8195C5201005AB75F /* XYZConfirmBidViewController.m in Sources */,
 				EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */,
 				EB11AD411959B1D2006AEF49 /* XYZTradingViewController.m in Sources */,
 				EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */,
+				EBE783E4195C6C1B005AB75F /* XYZStatsContentViewController.m in Sources */,
 				EB723FA0195437EF0071E80C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

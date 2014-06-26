@@ -25,10 +25,22 @@ NSInteger newPlayerCounter = 0;
     soldButton.hidden = YES;
     XYZTabBarViewController *tbvc = (XYZTabBarViewController *)self.tabBarController;
     self.gp = tbvc.gp;
+    currentPlayerLabel.text = @"Player 1's turn!";
     UIAlertView *playerAmount = [[UIAlertView alloc] initWithTitle:@"New Game" message:@"Amount of players:" delegate:self cancelButtonTitle:nil otherButtonTitles:@"3", @"4", @"5", nil];
     [playerAmount setAlertViewStyle:UIAlertViewStyleDefault];
     playerAmount.tag = 1;
     [playerAmount show];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    animalImage.image = NULL;
+    if (self.gp.currentPlayer.name != NULL) {
+        currentPlayerLabel.text = [NSString stringWithFormat:@"%@'s turn!", self.gp.currentPlayer.name];
+    }
+    drawCardButton.enabled = YES;
+    soldButton.hidden = YES;
+    XYZTabBarViewController *tbvc = (XYZTabBarViewController *)self.tabBarController;
+    tbvc.turnDecided = NO;
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,18 +1,20 @@
 //
-//  XYZTabBarViewController.m
+//  XYZTradeResultViewController.m
 //  Koehandel
 //
-//  Created by Boris van Linschoten on 25-06-14.
+//  Created by Boris van Linschoten on 26-06-14.
 //  Copyright (c) 2014 bjvanlinschoten. All rights reserved.
 //
 
-#import "XYZTabBarViewController.h"
+#import "XYZTradeResultViewController.h"
 
-@interface XYZTabBarViewController ()
+@interface XYZTradeResultViewController ()
 
 @end
 
-@implementation XYZTabBarViewController
+@implementation XYZTradeResultViewController
+
+@synthesize winnerLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,10 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.gp = [[XYZGameplay alloc] init];
-    self.tabBar.barStyle = UIBarStyleDefault;
-    self.tabBar.translucent = NO;
     // Do any additional setup after loading the view.
+    XYZPlayer *winner = [self.gp trade];
+    int animalIndex = [[self.gp.deck.animalDict objectForKey:self.gp.animalForTrade] integerValue];
+    
+    winnerLabel.text = [NSString stringWithFormat:@"%@ won the trade! He now has %d %@ cards!", winner.name, [[winner.animalCards objectAtIndex:animalIndex] integerValue], self.gp.animalForTrade];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +40,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation
@@ -50,4 +52,8 @@
 }
 */
 
+- (IBAction)back:(id)sender {
+    [self.gp nextTurn];
+    [self.presentingViewController.presentingViewController.presentingViewController.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+}
 @end

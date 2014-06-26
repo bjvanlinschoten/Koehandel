@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "XYZAuctionViewController.h"
+#import "XYZStatsPageViewController.h"
+#import "XYZTradingViewController.h"
 
 @interface XYZTabBarViewController : UITabBarController
 

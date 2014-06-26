@@ -90,5 +90,29 @@
     return mutualAnimals;
 }
 
+- (XYZPlayer *)trade {
+    
+    for (int i = 0; i < 6; i++) {
+        self.currentPlayer.moneyCards[i] = [NSNumber numberWithInt:[self.currentPlayer.moneyCards[i] integerValue] + [[[self.tradeBids objectAtIndex:1] objectAtIndex:i] integerValue]];
+        self.tradeEnemy.moneyCards[i] = [NSNumber numberWithInt:[self.tradeEnemy.moneyCards[i] integerValue] + [[[self.tradeBids objectAtIndex:0] objectAtIndex:i] integerValue]];
+    }
+    
+    int animalIndex = [[self.deck.animalDict objectForKey:self.animalForTrade] integerValue];
+    
+    if ([[[self.tradeBids objectAtIndex:0] lastObject] integerValue] > [[[self.tradeBids objectAtIndex:1] lastObject] integerValue]) {
+        self.currentPlayer.animalCards[animalIndex] = [NSNumber numberWithInt:[self.currentPlayer.animalCards[animalIndex] integerValue] + self.amountOfAnimalsForTrade];
+        self.tradeEnemy.animalCards[animalIndex] = [NSNumber numberWithInt:[self.tradeEnemy.animalCards[animalIndex] integerValue] - self.amountOfAnimalsForTrade];
+        return self.currentPlayer;
+    }
+    else if ([[[self.tradeBids objectAtIndex:0] lastObject] integerValue] < [[[self.tradeBids objectAtIndex:1] lastObject] integerValue]) {
+        self.tradeEnemy.animalCards[animalIndex] = [NSNumber numberWithInt:[self.tradeEnemy.animalCards[animalIndex] integerValue] + self.amountOfAnimalsForTrade];
+        self.currentPlayer.animalCards[animalIndex] = [NSNumber numberWithInt:[self.currentPlayer.animalCards[animalIndex] integerValue] - self.amountOfAnimalsForTrade];
+        return self.tradeEnemy;
+    }
+    else {
+        return NULL;
+    }
+}
+
 
 @end

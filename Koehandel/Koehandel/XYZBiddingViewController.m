@@ -111,17 +111,19 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
 }
 
 - (IBAction)placeBet:(id)sender {
-    [self.gp.tradeBids addObject:[NSNumber numberWithInteger:self.totalAmount]];
-    if (self.gp.bidCounter == 1) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        XYZBiddingViewController *bvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZBiddingViewController"];
-        bvc.gp = self.gp;
-        [bvc setModalPresentationStyle:UIModalPresentationFullScreen];
-        [self presentViewController:bvc animated:YES completion:nil];
+    NSMutableArray *bidInCards = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 6; i++){
+        [bidInCards addObject:[NSNumber numberWithInt:(int)[(UIStepper *)[self.cardSteppers objectAtIndex:i] value]]];
+        self.bidder.moneyCards[i] = [NSNumber numberWithInt:[self.bidder.moneyCards[i] integerValue] - (int)[(UIStepper *)[self.cardSteppers objectAtIndex:i] value]];
     }
-    else {
-        [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    }
+    [bidInCards addObject:[NSNumber numberWithInt:self.totalAmount]];
+    [self.gp.tradeBids addObject:bidInCards];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    XYZBiddingViewController *cbvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZConfirmBidViewController"];
+    cbvc.gp = self.gp;
+    [cbvc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:cbvc animated:YES completion:nil];
 }
 
 

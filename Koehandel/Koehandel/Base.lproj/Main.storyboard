@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="65"/>
+            <point key="canvasLocation" x="918" y="-591"/>
         </scene>
         <!--XYZTradingViewController-->
         <scene sceneID="dWW-m7-6TV">
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQY-3x-ClG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="725"/>
+            <point key="canvasLocation" x="918" y="69"/>
         </scene>
         <!--Bidding View Controller-->
         <scene sceneID="jxz-aE-Oq9">
@@ -276,7 +276,153 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE4-CP-P8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="725"/>
+            <point key="canvasLocation" x="1307" y="69"/>
+        </scene>
+        <!--XYZConfirmBidViewController-->
+        <scene sceneID="CVY-v3-njx">
+            <objects>
+                <viewController storyboardIdentifier="XYZConfirmBidViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pim-V2-b1p" userLabel="XYZConfirmBidViewController" customClass="XYZConfirmBidViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xma-on-A7e"/>
+                        <viewControllerLayoutGuide type="bottom" id="wkX-0q-Rvr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d2r-fJ-hrd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 bid 10 cards!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-C8-ukp">
+                                <rect key="frame" x="20" y="236" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2 bid 10 cards!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUO-8Q-EFf">
+                                <rect key="frame" x="20" y="272" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-J5-4W3">
+                                <rect key="frame" x="20" y="301" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="See result!"/>
+                                <connections>
+                                    <action selector="confirm:" destination="pim-V2-b1p" eventType="touchUpInside" id="inp-xY-MVc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="YYK-J5-4W3" id="g9B-2g-2h4"/>
+                        <outlet property="player1BidLabel" destination="eAg-C8-ukp" id="YdS-mT-dI0"/>
+                        <outlet property="player2BidLabel" destination="CUO-8Q-EFf" id="scF-oL-Ce3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-dA-kN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="69"/>
+        </scene>
+        <!--XYZTradeResultViewController-->
+        <scene sceneID="ZCt-vA-OFM">
+            <objects>
+                <viewController storyboardIdentifier="XYZTradeResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Nm-HT-MHF" userLabel="XYZTradeResultViewController" customClass="XYZTradeResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGA-eL-rPe"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGZ-kO-ZYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gR6-PD-ldj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 won the trade! He now has 3 goat cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hVW-fF-jk9">
+                                <rect key="frame" x="20" y="240" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bue-4u-AYZ">
+                                <rect key="frame" x="112" y="297" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="0Nm-HT-MHF" eventType="touchUpInside" id="ued-I3-WvF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="winnerLabel" destination="hVW-fF-jk9" id="KLV-Se-IaC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeS-Jv-wkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111" y="69"/>
+        </scene>
+        <!--Stats Data Source View Controller-->
+        <scene sceneID="JUE-bT-oBJ">
+            <objects>
+                <viewController storyboardIdentifier="XYZStatsDataSourceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uxk-Bq-blS" customClass="XYZStatsDataSourceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49k-Gt-JZT"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAb-Gh-aj6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7mI-vs-DWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="ZqJ-5j-OdA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bi9-vj-yuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="774"/>
+        </scene>
+        <!--Stats Page View Controller-->
+        <scene sceneID="Ch2-C1-AlN">
+            <objects>
+                <pageViewController storyboardIdentifier="XYZStatsPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="h6j-kD-dGF" customClass="XYZStatsPageViewController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="btw-yf-1vv"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EyJ-uA-GTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="774"/>
+        </scene>
+        <!--Stats Content View Controller-->
+        <scene sceneID="krf-n9-uYf">
+            <objects>
+                <viewController storyboardIdentifier="XYZStatsContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vKC-Mh-IJV" customClass="XYZStatsContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yg9-BX-NoY"/>
+                        <viewControllerLayoutGuide type="bottom" id="zNE-R6-JfT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TUa-4u-58c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-Ji-WSw">
+                                <rect key="frame" x="129" y="273" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="playerLabel" destination="QcX-Ji-WSw" id="jbi-kA-eBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dj5-X5-qqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="774"/>
         </scene>
         <!--XYZTabBarController-->
         <scene sceneID="dFb-RD-qLf">
@@ -291,6 +437,7 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="FTG-02-8ka"/>
                         <segue destination="vhr-Ts-9nj" kind="relationship" relationship="viewControllers" id="bsC-Ze-EHE"/>
+                        <segue destination="Uxk-Bq-blS" kind="relationship" relationship="viewControllers" id="Jxv-Sa-x38"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JV-S8-Ukv" userLabel="First Responder" sceneMemberID="firstResponder"/>

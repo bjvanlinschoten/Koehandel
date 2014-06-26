@@ -1,18 +1,18 @@
 //
-//  XYZTabBarViewController.m
+//  XYZStatsPageViewController.m
 //  Koehandel
 //
-//  Created by Boris van Linschoten on 25-06-14.
+//  Created by Boris van Linschoten on 26-06-14.
 //  Copyright (c) 2014 bjvanlinschoten. All rights reserved.
 //
 
-#import "XYZTabBarViewController.h"
+#import "XYZStatsPageViewController.h"
 
-@interface XYZTabBarViewController ()
+@interface XYZStatsPageViewController ()
 
 @end
 
-@implementation XYZTabBarViewController
+@implementation XYZStatsPageViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,10 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.gp = [[XYZGameplay alloc] init];
-    self.tabBar.barStyle = UIBarStyleDefault;
-    self.tabBar.translucent = NO;
     // Do any additional setup after loading the view.
+    self.gp = [(XYZTabBarViewController *)self.tabBarController gp];
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +39,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation
