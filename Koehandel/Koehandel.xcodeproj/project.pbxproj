@@ -28,7 +28,6 @@
 		EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FC91954384C0071E80C /* XYZPlayer.m */; };
 		EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCC1954449C0071E80C /* XYZDeck.m */; };
 		EB723FD0195444F40071E80C /* XYZCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCF195444F40071E80C /* XYZCard.m */; };
-		EB79FF6C195D82CE0050BB2D /* XYZStatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */; };
 		EB79FF6F195D89070050BB2D /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */; };
 		EB79FF74195DA10F0050BB2D /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF73195DA10F0050BB2D /* coins.png */; };
 		EB79FF76195DA1640050BB2D /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF75195DA1640050BB2D /* score.png */; };
@@ -113,8 +112,6 @@
 		EB723FCC1954449C0071E80C /* XYZDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZDeck.m; sourceTree = "<group>"; };
 		EB723FCE195444F40071E80C /* XYZCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCard.h; sourceTree = "<group>"; };
 		EB723FCF195444F40071E80C /* XYZCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCard.m; sourceTree = "<group>"; };
-		EB79FF6A195D82CE0050BB2D /* XYZStatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsTableViewController.h; sourceTree = "<group>"; };
-		EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsTableViewController.m; sourceTree = "<group>"; };
 		EB79FF6D195D89070050BB2D /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsTableViewCell.h; path = ../StatsTableViewCell.h; sourceTree = "<group>"; };
 		EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsTableViewCell.m; path = ../StatsTableViewCell.m; sourceTree = "<group>"; };
 		EB79FF73195DA10F0050BB2D /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
@@ -324,8 +321,6 @@
 				EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */,
 				EBE783DF195C6B8E005AB75F /* XYZStatsPageViewController.h */,
 				EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */,
-				EB79FF6A195D82CE0050BB2D /* XYZStatsTableViewController.h */,
-				EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */,
 				EB79FF9E195DCE5B0050BB2D /* XYZTableWithStatsViewController.h */,
 				EB79FF9F195DCE5B0050BB2D /* XYZTableWithStatsViewController.m */,
 				EB79FF6D195D89070050BB2D /* StatsTableViewCell.h */,
@@ -511,7 +506,6 @@
 				EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */,
 				EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */,
 				EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */,
-				EB79FF6C195D82CE0050BB2D /* XYZStatsTableViewController.m in Sources */,
 				EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */,
 				EB79FFA0195DCE5B0050BB2D /* XYZTableWithStatsViewController.m in Sources */,
 				EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */,

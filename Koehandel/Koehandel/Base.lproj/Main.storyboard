@@ -393,53 +393,6 @@
             </objects>
             <point key="canvasLocation" x="1323" y="774"/>
         </scene>
-        <!--Stats Table View Controller-->
-        <scene sceneID="D3C-dq-4fU">
-            <objects>
-                <tableViewController storyboardIdentifier="XYZStatsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oDt-mc-2Gh" customClass="XYZStatsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="jLt-9s-m1v">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableItem" rowHeight="67" id="Rby-9t-NMV" customClass="StatsTableViewCell">
-                                <rect key="frame" x="0.0" y="55" width="320" height="67"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rby-9t-NMV" id="9FA-RS-Chg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Ln-vtC">
-                                            <rect key="frame" x="97" y="22" width="203" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cow.png" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-bm-fYx">
-                                            <rect key="frame" x="8" y="8" width="69" height="49"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="animalAmount" destination="ls4-Ln-vtC" id="bOc-tT-DdI"/>
-                                    <outlet property="animalImage" destination="1rr-bm-fYx" id="hCN-lP-5Ay"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="oDt-mc-2Gh" id="MRX-2G-Adt"/>
-                            <outlet property="delegate" destination="oDt-mc-2Gh" id="yhf-Nv-GAK"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dsI-Ew-Gij" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1714" y="774"/>
-        </scene>
         <!--Table With Stats View Controller-->
         <scene sceneID="Rrz-Bt-B6F">
             <objects>
@@ -503,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18X-eS-0an" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="774"/>
+            <point key="canvasLocation" x="1728" y="774"/>
         </scene>
         <!--XYZTabBarController-->
         <scene sceneID="dFb-RD-qLf">
