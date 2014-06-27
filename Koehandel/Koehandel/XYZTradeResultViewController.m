@@ -32,7 +32,12 @@
     XYZPlayer *winner = [self.gp trade];
     int animalIndex = [[self.gp.deck.animalDict objectForKey:self.gp.animalForTrade] integerValue];
     
-    winnerLabel.text = [NSString stringWithFormat:@"%@ won the trade! He now has %d %@ cards!", winner.name, [[winner.animalCards objectAtIndex:animalIndex] integerValue], self.gp.animalForTrade];
+    if (winner.name == NULL) {
+        winnerLabel.text = @"It's a draw!";
+    }
+    else {
+        winnerLabel.text = [NSString stringWithFormat:@"%@ won the trade! He now has %d %@ cards!", winner.name, [[winner.animalCards objectAtIndex:animalIndex] integerValue], self.gp.animalForTrade];
+    }
 }
 
 - (void)didReceiveMemoryWarning

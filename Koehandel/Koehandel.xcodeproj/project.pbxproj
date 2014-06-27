@@ -28,6 +28,24 @@
 		EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FC91954384C0071E80C /* XYZPlayer.m */; };
 		EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCC1954449C0071E80C /* XYZDeck.m */; };
 		EB723FD0195444F40071E80C /* XYZCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EB723FCF195444F40071E80C /* XYZCard.m */; };
+		EB79FF6C195D82CE0050BB2D /* XYZStatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */; };
+		EB79FF6F195D89070050BB2D /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */; };
+		EB79FF74195DA10F0050BB2D /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF73195DA10F0050BB2D /* coins.png */; };
+		EB79FF76195DA1640050BB2D /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF75195DA1640050BB2D /* score.png */; };
+		EB79FF7E195DB8500050BB2D /* trade.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF78195DB8500050BB2D /* trade.png */; };
+		EB79FF80195DB8500050BB2D /* auction.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF7A195DB8500050BB2D /* auction.png */; };
+		EB79FF82195DB8500050BB2D /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF7C195DB8500050BB2D /* stats.png */; };
+		EB79FF8B195DBBD90050BB2D /* auctionblack.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF88195DBBD90050BB2D /* auctionblack.png */; };
+		EB79FF8C195DBBD90050BB2D /* statsblack.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF89195DBBD90050BB2D /* statsblack.png */; };
+		EB79FF8D195DBBD90050BB2D /* tradeblack.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF8A195DBBD90050BB2D /* tradeblack.png */; };
+		EB79FF91195DBC6B0050BB2D /* brain_filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF8E195DBC6B0050BB2D /* brain_filled-50.png */; };
+		EB79FF92195DBC6B0050BB2D /* megaphone_filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF8F195DBC6B0050BB2D /* megaphone_filled-50.png */; };
+		EB79FF93195DBC6B0050BB2D /* presentation_filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF90195DBC6B0050BB2D /* presentation_filled-50.png */; };
+		EB79FF97195DBCF20050BB2D /* auctionactive.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF94195DBCF20050BB2D /* auctionactive.png */; };
+		EB79FF98195DBCF20050BB2D /* statsactive.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF95195DBCF20050BB2D /* statsactive.png */; };
+		EB79FF99195DBCF20050BB2D /* tradeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF96195DBCF20050BB2D /* tradeactive.png */; };
+		EB79FF9B195DBD9F0050BB2D /* Grass 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */; };
+		EB79FF9D195DC8340050BB2D /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF9C195DC8340050BB2D /* set.png */; };
 		EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */; };
 		EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */; };
 		EB8D461619546F2000D8B8FD /* Cow.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460C19546F2000D8B8FD /* Cow.png */; };
@@ -49,7 +67,6 @@
 		EBE783D8195C5201005AB75F /* XYZConfirmBidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783D7195C5201005AB75F /* XYZConfirmBidViewController.m */; };
 		EBE783DB195C6250005AB75F /* XYZTradeResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783DA195C6250005AB75F /* XYZTradeResultViewController.m */; };
 		EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */; };
-		EBE783E4195C6C1B005AB75F /* XYZStatsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */; };
 		EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +112,26 @@
 		EB723FCC1954449C0071E80C /* XYZDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZDeck.m; sourceTree = "<group>"; };
 		EB723FCE195444F40071E80C /* XYZCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCard.h; sourceTree = "<group>"; };
 		EB723FCF195444F40071E80C /* XYZCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCard.m; sourceTree = "<group>"; };
+		EB79FF6A195D82CE0050BB2D /* XYZStatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsTableViewController.h; sourceTree = "<group>"; };
+		EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsTableViewController.m; sourceTree = "<group>"; };
+		EB79FF6D195D89070050BB2D /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsTableViewCell.h; path = ../StatsTableViewCell.h; sourceTree = "<group>"; };
+		EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsTableViewCell.m; path = ../StatsTableViewCell.m; sourceTree = "<group>"; };
+		EB79FF73195DA10F0050BB2D /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
+		EB79FF75195DA1640050BB2D /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
+		EB79FF78195DB8500050BB2D /* trade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trade.png; sourceTree = "<group>"; };
+		EB79FF7A195DB8500050BB2D /* auction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = auction.png; sourceTree = "<group>"; };
+		EB79FF7C195DB8500050BB2D /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
+		EB79FF88195DBBD90050BB2D /* auctionblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = auctionblack.png; sourceTree = "<group>"; };
+		EB79FF89195DBBD90050BB2D /* statsblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statsblack.png; sourceTree = "<group>"; };
+		EB79FF8A195DBBD90050BB2D /* tradeblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeblack.png; sourceTree = "<group>"; };
+		EB79FF8E195DBC6B0050BB2D /* brain_filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain_filled-50.png"; sourceTree = "<group>"; };
+		EB79FF8F195DBC6B0050BB2D /* megaphone_filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "megaphone_filled-50.png"; sourceTree = "<group>"; };
+		EB79FF90195DBC6B0050BB2D /* presentation_filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "presentation_filled-50.png"; sourceTree = "<group>"; };
+		EB79FF94195DBCF20050BB2D /* auctionactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = auctionactive.png; sourceTree = "<group>"; };
+		EB79FF95195DBCF20050BB2D /* statsactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statsactive.png; sourceTree = "<group>"; };
+		EB79FF96195DBCF20050BB2D /* tradeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeactive.png; sourceTree = "<group>"; };
+		EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grass 5.jpg"; sourceTree = "<group>"; };
+		EB79FF9C195DC8340050BB2D /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
 		EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTabBarViewController.h; sourceTree = "<group>"; };
 		EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTabBarViewController.m; sourceTree = "<group>"; };
 		EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBiddingViewController.h; sourceTree = "<group>"; };
@@ -121,8 +158,6 @@
 		EBE783DA195C6250005AB75F /* XYZTradeResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTradeResultViewController.m; sourceTree = "<group>"; };
 		EBE783DF195C6B8E005AB75F /* XYZStatsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsPageViewController.h; sourceTree = "<group>"; };
 		EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsPageViewController.m; sourceTree = "<group>"; };
-		EBE783E2195C6C1B005AB75F /* XYZStatsContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZStatsContentViewController.h; path = ../XYZStatsContentViewController.h; sourceTree = "<group>"; };
-		EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZStatsContentViewController.m; path = ../XYZStatsContentViewController.m; sourceTree = "<group>"; };
 		EBE783E9195C743B005AB75F /* XYZStatsDataSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStatsDataSourceViewController.h; sourceTree = "<group>"; };
 		EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZStatsDataSourceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +224,7 @@
 				EB723FA3195437EF0071E80C /* XYZAppDelegate.m */,
 				EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */,
 				EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */,
+				EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */,
 				EBE783E5195C6C29005AB75F /* Stats */,
 				EBE783E6195C6C36005AB75F /* Trade */,
 				EBE783E7195C6C41005AB75F /* Auction */,
@@ -202,6 +238,10 @@
 		EB723F9A195437EF0071E80C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB79FF9C195DC8340050BB2D /* set.png */,
+				EB79FF77195DB84F0050BB2D /* baricons */,
+				EB79FF75195DA1640050BB2D /* score.png */,
+				EB79FF73195DA10F0050BB2D /* coins.png */,
 				EBE783CA195C1BD7005AB75F /* moneybag0.png */,
 				EBE783CB195C1BD7005AB75F /* moneybag10.png */,
 				EBE783CC195C1BD7005AB75F /* moneybag50.png */,
@@ -237,6 +277,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EB79FF77195DB84F0050BB2D /* baricons */ = {
+			isa = PBXGroup;
+			children = (
+				EB79FF88195DBBD90050BB2D /* auctionblack.png */,
+				EB79FF94195DBCF20050BB2D /* auctionactive.png */,
+				EB79FF95195DBCF20050BB2D /* statsactive.png */,
+				EB79FF96195DBCF20050BB2D /* tradeactive.png */,
+				EB79FF89195DBBD90050BB2D /* statsblack.png */,
+				EB79FF8E195DBC6B0050BB2D /* brain_filled-50.png */,
+				EB79FF8F195DBC6B0050BB2D /* megaphone_filled-50.png */,
+				EB79FF90195DBC6B0050BB2D /* presentation_filled-50.png */,
+				EB79FF8A195DBBD90050BB2D /* tradeblack.png */,
+				EB79FF78195DB8500050BB2D /* trade.png */,
+				EB79FF7A195DB8500050BB2D /* auction.png */,
+				EB79FF7C195DB8500050BB2D /* stats.png */,
+			);
+			name = baricons;
+			path = ../../baricons;
+			sourceTree = "<group>";
+		};
 		EB8D462019546F3700D8B8FD /* Animals */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,8 +321,10 @@
 				EBE783EA195C743B005AB75F /* XYZStatsDataSourceViewController.m */,
 				EBE783DF195C6B8E005AB75F /* XYZStatsPageViewController.h */,
 				EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */,
-				EBE783E2195C6C1B005AB75F /* XYZStatsContentViewController.h */,
-				EBE783E3195C6C1B005AB75F /* XYZStatsContentViewController.m */,
+				EB79FF6A195D82CE0050BB2D /* XYZStatsTableViewController.h */,
+				EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */,
+				EB79FF6D195D89070050BB2D /* StatsTableViewCell.h */,
+				EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */,
 			);
 			name = Stats;
 			sourceTree = "<group>";
@@ -383,26 +445,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB79FF8B195DBBD90050BB2D /* auctionblack.png in Resources */,
+				EB79FF99195DBCF20050BB2D /* tradeactive.png in Resources */,
 				EB723FAC195437EF0071E80C /* Images.xcassets in Resources */,
 				EB8D461F19546F2000D8B8FD /* Chicken.png in Resources */,
+				EB79FF98195DBCF20050BB2D /* statsactive.png in Resources */,
+				EB79FF91195DBC6B0050BB2D /* brain_filled-50.png in Resources */,
 				EBE783D0195C1BD7005AB75F /* moneybag0.png in Resources */,
 				EBE783D3195C1BD7005AB75F /* moneybag100.png in Resources */,
 				EB8D461B19546F2000D8B8FD /* Goose.png in Resources */,
+				EB79FF7E195DB8500050BB2D /* trade.png in Resources */,
+				EB79FF80195DB8500050BB2D /* auction.png in Resources */,
+				EB79FF9B195DBD9F0050BB2D /* Grass 5.jpg in Resources */,
+				EB79FF97195DBCF20050BB2D /* auctionactive.png in Resources */,
 				EBE783D1195C1BD7005AB75F /* moneybag10.png in Resources */,
+				EB79FF93195DBC6B0050BB2D /* presentation_filled-50.png in Resources */,
 				EBE783D4195C1BD7005AB75F /* moneybag200.png in Resources */,
 				EB723F9E195437EF0071E80C /* InfoPlist.strings in Resources */,
 				EB8D461A19546F2000D8B8FD /* Cat.png in Resources */,
 				EB8D461919546F2000D8B8FD /* Dog.png in Resources */,
+				EB79FF8C195DBBD90050BB2D /* statsblack.png in Resources */,
 				EB11ACF7195830F7006AEF49 /* card-back.png in Resources */,
 				EBE783D5195C1BD7005AB75F /* moneybag500.png in Resources */,
+				EB79FF82195DB8500050BB2D /* stats.png in Resources */,
+				EB79FF76195DA1640050BB2D /* score.png in Resources */,
 				EB8D461719546F2000D8B8FD /* Sheep.png in Resources */,
 				EB8D461E19546F2000D8B8FD /* Goat.png in Resources */,
 				EB8D461819546F2000D8B8FD /* Donkey.png in Resources */,
 				EBE783D2195C1BD7005AB75F /* moneybag50.png in Resources */,
+				EB79FF92195DBC6B0050BB2D /* megaphone_filled-50.png in Resources */,
 				EB723FA7195437EF0071E80C /* Main.storyboard in Resources */,
 				EB8D461D19546F2000D8B8FD /* Horse.png in Resources */,
+				EB79FF8D195DBBD90050BB2D /* tradeblack.png in Resources */,
 				EB8D461C19546F2000D8B8FD /* Pig.png in Resources */,
 				EB8D461619546F2000D8B8FD /* Cow.png in Resources */,
+				EB79FF74195DA10F0050BB2D /* coins.png in Resources */,
+				EB79FF9D195DC8340050BB2D /* set.png in Resources */,
 				EB11ACF6195830F7006AEF49 /* card-border.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,10 +501,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB723FCD1954449C0071E80C /* XYZDeck.m in Sources */,
+				EB79FF6F195D89070050BB2D /* StatsTableViewCell.m in Sources */,
 				EB723FD0195444F40071E80C /* XYZCard.m in Sources */,
 				EB11ACF3195817B1006AEF49 /* XYZGameplay.m in Sources */,
 				EB723FAA195437EF0071E80C /* XYZAuctionViewController.m in Sources */,
 				EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */,
+				EB79FF6C195D82CE0050BB2D /* XYZStatsTableViewController.m in Sources */,
 				EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */,
 				EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */,
 				EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */,
@@ -435,7 +515,6 @@
 				EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */,
 				EB11AD411959B1D2006AEF49 /* XYZTradingViewController.m in Sources */,
 				EB723FCA1954384C0071E80C /* XYZPlayer.m in Sources */,
-				EBE783E4195C6C1B005AB75F /* XYZStatsContentViewController.m in Sources */,
 				EB723FA0195437EF0071E80C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

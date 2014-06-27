@@ -29,6 +29,12 @@
     self.gp = [[XYZGameplay alloc] init];
     self.tabBar.barStyle = UIBarStyleDefault;
     self.tabBar.translucent = NO;
+    UITabBarItem *auctionItem = [self.tabBar.items objectAtIndex:0];
+    UITabBarItem *tradeItem = [self.tabBar.items objectAtIndex:1];
+    UITabBarItem *statsItem = [self.tabBar.items objectAtIndex:2];
+    auctionItem.image = [UIImage imageNamed:@"auctionactive.png"];
+    tradeItem.image = [UIImage imageNamed:@"tradeactive.png"];
+    statsItem.image = [UIImage imageNamed:@"statsactive.png"];
     // Do any additional setup after loading the view.
 }
 

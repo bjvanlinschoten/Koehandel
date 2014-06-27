@@ -17,6 +17,8 @@
 
 -(NSInteger)getTotalMoney;
 -(NSInteger)getScore;
+-(NSInteger)getAmountMoneyCards;
+-(NSInteger)getSets;
 -(id) initWithName: (NSString *)name;
 
 @end

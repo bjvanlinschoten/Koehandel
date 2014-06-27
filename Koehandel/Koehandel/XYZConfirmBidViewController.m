@@ -43,7 +43,7 @@
     else {
         int totalCards2 = 0;
         for (int i = 0; i < 6; i++) {
-            totalCards1 += [[[self.gp.tradeBids objectAtIndex:1] objectAtIndex:i] integerValue];
+            totalCards2 += [[[self.gp.tradeBids objectAtIndex:1] objectAtIndex:i] integerValue];
         }
         self.player2BidLabel.hidden = NO;
         self.player2BidLabel.text = [NSString stringWithFormat:@"%@'s bid exists of %d cards", self.gp.tradeEnemy.name, totalCards2];

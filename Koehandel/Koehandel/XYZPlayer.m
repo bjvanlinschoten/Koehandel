@@ -21,7 +21,7 @@
             [self.moneyCards addObject:[NSNumber numberWithInt:0]];
         }
         for (int i = 0; i < 10; i++){
-            [self.animalCards addObject:[NSNumber numberWithInt:2]];
+            [self.animalCards addObject:[NSNumber numberWithInt:0]];
         }
     }
     return self;
@@ -34,7 +34,7 @@
 -(NSInteger)getScore {
     NSInteger sets = 0;
     NSInteger values[10] = {10, 40, 90, 160, 250, 350, 500, 650, 800, 1000};
-    NSInteger scoreBeforeMultiply;
+    NSInteger scoreBeforeMultiply = 0;
     for (int i = 0; i < 10; i++) {
         if ([self.animalCards[i] integerValue] == 4) {
             sets++;
@@ -42,6 +42,24 @@
         }
     }
     return sets * scoreBeforeMultiply;
+}
+
+-(NSInteger)getAmountMoneyCards {
+    int amount = 0;
+    for (int i = 0; i < 6; i++) {
+        amount += [[self.moneyCards objectAtIndex:i] integerValue];
+    }
+    return amount;
+}
+
+-(NSInteger)getSets {
+    int sets = 0;
+    for (int i = 0; i < 10; i++) {
+        if ([self.animalCards[i] integerValue] == 4) {
+            sets++;
+        }
+    }
+    return sets;
 }
 
 @end

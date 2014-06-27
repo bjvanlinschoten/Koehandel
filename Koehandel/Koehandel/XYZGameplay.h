@@ -16,10 +16,12 @@
 @property (strong, nonatomic) NSMutableArray *players;
 @property XYZPlayer *currentPlayer;
 @property (strong, nonatomic) NSMutableArray *waitingPlayers;
+@property XYZPlayer *seller;
 @property XYZPlayer *buyer;
 @property XYZCard *currentCard;
 @property NSInteger amountOfPlayers;
 @property XYZDeck *deck;
+@property NSInteger donkeys;
 
 @property NSMutableArray *tradeBids;
 @property NSInteger bidCounter;
@@ -27,7 +29,7 @@
 @property NSInteger amountOfAnimalsForTrade;
 @property NSString *animalForTrade;
 
--(BOOL) auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)playerBought;
+-(BOOL) auctionCard:(XYZCard *)cardSold soldFor:(int)amount;
 -(void) nextTurn;
 -(NSMutableArray *)determineMutualAnimals;
 -(XYZPlayer *) trade;

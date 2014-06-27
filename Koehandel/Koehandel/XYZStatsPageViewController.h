@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "XYZTabBarViewController.h"
-#import "XYZStatsContentViewController.h"
 
 @interface XYZStatsPageViewController : UIPageViewController
 

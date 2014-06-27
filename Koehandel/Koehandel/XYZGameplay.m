@@ -17,24 +17,25 @@
         self.players = [[NSMutableArray alloc] init];
         self.waitingPlayers = [[NSMutableArray alloc] init];
         self.deck = [[XYZDeck alloc] init];
+        self.donkeys = 0;
     }
     return self;
 }
 
--(BOOL)auctionCard:(XYZCard *)cardSold soldfor:(int)amount buyer:(XYZPlayer *)buyer {
-    if ([buyer getTotalMoney] > amount) {
+-(BOOL)auctionCard:(XYZCard *)cardSold soldFor:(int)amount{
+    if ([self.buyer getTotalMoney] >= amount) {
         int possibleMoneyCards[6] = {0, 10, 50, 100, 200, 500};
         int i = 5;
         while (amount > 0) {
             int moneyValueBelowCardI = 0;
             for (int j = 0; j < i; j++) {
-                moneyValueBelowCardI += [buyer.moneyCards[j] integerValue] * possibleMoneyCards[j];
+                moneyValueBelowCardI += [self.buyer.moneyCards[j] integerValue] * possibleMoneyCards[j];
             }
             
             if (amount >= possibleMoneyCards[i] || moneyValueBelowCardI < amount) {
-                if ([buyer.moneyCards[i] integerValue] > 0) {
-                    buyer.moneyCards[i] = [NSNumber numberWithInt:[buyer.moneyCards[i] integerValue] - 1];
-                    self.currentPlayer.moneyCards[i] = [NSNumber numberWithInt:[self.currentPlayer.moneyCards[i] integerValue] + 1];
+                if ([self.buyer.moneyCards[i] integerValue] > 0) {
+                    self.buyer.moneyCards[i] = [NSNumber numberWithInt:[self.buyer.moneyCards[i] integerValue] - 1];
+                    self.seller.moneyCards[i] = [NSNumber numberWithInt:[self.seller.moneyCards[i] integerValue] + 1];
                     amount = amount - possibleMoneyCards[i];
                 }
                 else {
@@ -52,7 +53,7 @@
                 break;
             }
         }
-        buyer.animalCards[animalIndex] = [NSNumber numberWithInt:[buyer.animalCards[animalIndex] integerValue] + 1];
+        self.buyer.animalCards[animalIndex] = [NSNumber numberWithInt:[self.buyer.animalCards[animalIndex] integerValue] + 1];
         return true;
     }
     else {

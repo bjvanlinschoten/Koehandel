@@ -33,14 +33,15 @@ NSInteger newPlayerCounter = 0;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    animalImage.image = NULL;
-    if (self.gp.currentPlayer.name != NULL) {
-        currentPlayerLabel.text = [NSString stringWithFormat:@"%@'s turn!", self.gp.currentPlayer.name];
-    }
-    drawCardButton.enabled = YES;
-    soldButton.hidden = YES;
     XYZTabBarViewController *tbvc = (XYZTabBarViewController *)self.tabBarController;
-    tbvc.turnDecided = NO;
+    if (tbvc.turnDecided == NO) {
+        animalImage.image = NULL;
+        if (self.gp.currentPlayer.name != NULL) {
+            currentPlayerLabel.text = [NSString stringWithFormat:@"%@'s turn!", self.gp.currentPlayer.name];
+        }
+        drawCardButton.enabled = YES;
+        soldButton.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,44 +54,22 @@ NSInteger newPlayerCounter = 0;
     XYZTabBarViewController *tbvc = (XYZTabBarViewController *)self.tabBarController;
     tbvc.turnDecided = YES;
     self.gp.currentCard = [self.gp.deck draw];
+    if ([self.gp.currentCard.animal isEqualToString:@"Donkey"]) {
+        for (XYZPlayer *player in self.gp.players) {
+            player.moneyCards[self.gp.donkeys + 2] = [NSNumber numberWithInt:[player.moneyCards[self.gp.donkeys + 2] integerValue] + 1];
+        }
+        int donkeyValues[4] = {50, 100, 200, 500};
+        UIAlertView *donkey = [[UIAlertView alloc] initWithTitle:@"Donkey drawn!" message:[NSString stringWithFormat:@"All players receive a money card with value %d", donkeyValues[self.gp.donkeys]] delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+        [donkey setAlertViewStyle:UIAlertViewStyleDefault];
+        [donkey show];
+    }
     scoreLabel.text = [NSString stringWithFormat:@"%d", self.gp.currentCard.value];
     cardsRemainingLabel.text = [NSString stringWithFormat:@"Cards remaining: %d", [self.gp.deck.cards count]];
     cardImage.image = [UIImage imageNamed:@"card-border.png"];
     drawCardButton.enabled = NO;
     soldButton.hidden = NO;
 
-    switch ([[self.gp.deck.animalDict objectForKey:self.gp.currentCard.animal] integerValue]) {
-        case 0:
-            animalImage.image = [UIImage imageNamed:@"Chicken.png"];
-            break;
-        case 1:
-            animalImage.image = [UIImage imageNamed:@"Goose.png"];
-            break;
-        case 2:
-            animalImage.image = [UIImage imageNamed:@"Cat.png"];
-            break;
-        case 3:
-            animalImage.image = [UIImage imageNamed:@"Dog.png"];
-            break;
-        case 4:
-            animalImage.image = [UIImage imageNamed:@"Sheep.png"];
-            break;
-        case 5:
-            animalImage.image = [UIImage imageNamed:@"Goat.png"];
-            break;
-        case 6:
-            animalImage.image = [UIImage imageNamed:@"Donkey.png"];
-            break;
-        case 7:
-            animalImage.image = [UIImage imageNamed:@"Pig.png"];
-            break;
-        case 8:
-            animalImage.image = [UIImage imageNamed:@"Cow.png"];
-            break;
-        case 9:
-            animalImage.image = [UIImage imageNamed:@"Horse.png"];
-            break;
-    }
+    animalImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.gp.currentCard.animal]];
 }
 
 - (IBAction)cardSold:(id)sender {
@@ -101,7 +80,7 @@ NSInteger newPlayerCounter = 0;
     [cardSold addButtonWithTitle:@"Oops! Go back!"];
     cardSold.cancelButtonIndex = [self.gp.waitingPlayers count];
     cardSold.tag = 1;
-    [cardSold showInView:self.view];
+    [cardSold showFromTabBar:self.tabBarController.tabBar];
 }
 
 
@@ -150,12 +129,21 @@ NSInteger newPlayerCounter = 0;
             }
             break;
         case 3:
-            if (buttonIndex == 0) {
+            if (buttonIndex == 1) {
                 return;
             }
-            else if(buttonIndex == 1) {
+            else {
+                
                 NSInteger amount = [[[alertView textFieldAtIndex:0] text] integerValue];
-                if ([self.gp auctionCard:self.gp.currentCard soldfor:amount buyer:self.gp.buyer]) {;
+                if (buttonIndex == 2) {
+                    self.gp.seller = self.gp.buyer;
+                    self.gp.buyer = self.gp.currentPlayer;
+                }
+                else {
+                    self.gp.seller = self.gp.currentPlayer;
+                }
+                
+                if ([self.gp auctionCard:self.gp.currentCard soldFor:amount]) {;
                     [self nextTurn];
                 }
                 else {
@@ -168,6 +156,7 @@ NSInteger newPlayerCounter = 0;
                     [cardSold show];
                 }
             }
+            
             break;
     }
 }
@@ -181,7 +170,7 @@ NSInteger newPlayerCounter = 0;
         for (int i = 0; i <= [self.gp.waitingPlayers count]; i++){
             if (buttonIndex == i) {
                 self.gp.buyer = [self.gp.waitingPlayers objectAtIndex:i];
-                UIAlertView *cardSold = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Sold to %@!", self.gp.buyer.name] message:@"Animal sold for:" delegate:self cancelButtonTitle:@"Oops! Go Back!" otherButtonTitles:@"Sold!", nil];
+                UIAlertView *cardSold = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Sold to %@!", self.gp.buyer.name] message:@"Animal sold for:" delegate:self cancelButtonTitle:@"Sold!" otherButtonTitles:@"Oops! Go Back!", [NSString stringWithFormat:@"%@ buys himself!", self.gp.currentPlayer.name], nil];
                 [cardSold setAlertViewStyle:UIAlertViewStylePlainTextInput];
                 UITextField * alertTextField = [cardSold textFieldAtIndex:0];
                 alertTextField.keyboardType = UIKeyboardTypeNumberPad;
