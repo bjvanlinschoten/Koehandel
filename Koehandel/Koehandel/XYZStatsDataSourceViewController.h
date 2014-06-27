@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "XYZTabBarViewController.h"
-#import "XYZStatsTableViewController.h"
+#import "XYZTableWithStatsViewController.h"
 
-@class XYZStatsTableViewController;
+@class XYZTableWithStatsViewController;
 
 @interface XYZStatsDataSourceViewController : UIViewController <UIPageViewControllerDataSource>
 
 @property XYZGameplay *gp;
 @property (strong, nonatomic) XYZStatsPageViewController *statsPageViewController;
 
-- (XYZStatsTableViewController *) viewControllerAtIndex:(NSUInteger)index;
+- (XYZTableWithStatsViewController *) viewControllerAtIndex:(NSUInteger)index;
 
 @end

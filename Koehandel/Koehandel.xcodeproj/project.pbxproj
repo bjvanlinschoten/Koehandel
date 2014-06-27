@@ -46,6 +46,7 @@
 		EB79FF99195DBCF20050BB2D /* tradeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF96195DBCF20050BB2D /* tradeactive.png */; };
 		EB79FF9B195DBD9F0050BB2D /* Grass 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */; };
 		EB79FF9D195DC8340050BB2D /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = EB79FF9C195DC8340050BB2D /* set.png */; };
+		EB79FFA0195DCE5B0050BB2D /* XYZTableWithStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB79FF9F195DCE5B0050BB2D /* XYZTableWithStatsViewController.m */; };
 		EB8A84E7195AEBBC006B079A /* XYZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */; };
 		EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8A84E9195B62C6006B079A /* XYZBiddingViewController.m */; };
 		EB8D461619546F2000D8B8FD /* Cow.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8D460C19546F2000D8B8FD /* Cow.png */; };
@@ -132,6 +133,8 @@
 		EB79FF96195DBCF20050BB2D /* tradeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeactive.png; sourceTree = "<group>"; };
 		EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grass 5.jpg"; sourceTree = "<group>"; };
 		EB79FF9C195DC8340050BB2D /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
+		EB79FF9E195DCE5B0050BB2D /* XYZTableWithStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTableWithStatsViewController.h; sourceTree = "<group>"; };
+		EB79FF9F195DCE5B0050BB2D /* XYZTableWithStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTableWithStatsViewController.m; sourceTree = "<group>"; };
 		EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTabBarViewController.h; sourceTree = "<group>"; };
 		EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTabBarViewController.m; sourceTree = "<group>"; };
 		EB8A84E8195B62C6006B079A /* XYZBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBiddingViewController.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				EBE783E0195C6B8E005AB75F /* XYZStatsPageViewController.m */,
 				EB79FF6A195D82CE0050BB2D /* XYZStatsTableViewController.h */,
 				EB79FF6B195D82CE0050BB2D /* XYZStatsTableViewController.m */,
+				EB79FF9E195DCE5B0050BB2D /* XYZTableWithStatsViewController.h */,
+				EB79FF9F195DCE5B0050BB2D /* XYZTableWithStatsViewController.m */,
 				EB79FF6D195D89070050BB2D /* StatsTableViewCell.h */,
 				EB79FF6E195D89070050BB2D /* StatsTableViewCell.m */,
 			);
@@ -508,6 +513,7 @@
 				EB8A84EA195B62C6006B079A /* XYZBiddingViewController.m in Sources */,
 				EB79FF6C195D82CE0050BB2D /* XYZStatsTableViewController.m in Sources */,
 				EBE783EB195C743B005AB75F /* XYZStatsDataSourceViewController.m in Sources */,
+				EB79FFA0195DCE5B0050BB2D /* XYZTableWithStatsViewController.m in Sources */,
 				EBE783E1195C6B8E005AB75F /* XYZStatsPageViewController.m in Sources */,
 				EB723FA4195437EF0071E80C /* XYZAppDelegate.m in Sources */,
 				EBE783DB195C6250005AB75F /* XYZTradeResultViewController.m in Sources */,

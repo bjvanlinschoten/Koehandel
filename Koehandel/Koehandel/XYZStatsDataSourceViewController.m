@@ -31,7 +31,7 @@
     self.statsPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"XYZStatsPageViewController"];
     self.statsPageViewController.dataSource = self;
     
-    XYZStatsTableViewController *startingViewController = [self viewControllerAtIndex:0];
+    XYZTableWithStatsViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.statsPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
@@ -49,7 +49,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((XYZStatsTableViewController *) viewController).pageIndex;
+    NSUInteger index = ((XYZTableWithStatsViewController *) viewController).pageIndex;
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -60,7 +60,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((XYZStatsTableViewController *) viewController).pageIndex;
+    NSUInteger index = ((XYZTableWithStatsViewController *) viewController).pageIndex;
     
     if (index == NSNotFound) {
         return nil;
@@ -73,18 +73,18 @@
     return [self viewControllerAtIndex:index];
 }
 
-- (XYZStatsTableViewController *)viewControllerAtIndex:(NSUInteger)index
+- (XYZTableWithStatsViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([self.gp.players count] == 0) || (index >= [self.gp.players count])) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
-    XYZStatsTableViewController *stvc = [self.storyboard instantiateViewControllerWithIdentifier:@"XYZStatsTableViewController"];
-    stvc.player = [self.gp.players objectAtIndex:index];
-    stvc.pageIndex = index;
+    XYZTableWithStatsViewController *twsvc = [self.storyboard instantiateViewControllerWithIdentifier:@"XYZTableWithStatsViewController"];
+    twsvc.player = [self.gp.players objectAtIndex:index];
+    twsvc.pageIndex = index;
     
-    return stvc;
+    return twsvc;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
