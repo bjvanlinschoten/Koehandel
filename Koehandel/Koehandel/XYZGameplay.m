@@ -126,7 +126,7 @@
     // determine animal index
     int animalIndex = [[self.deck.animalDict objectForKey:self.animalForTrade] integerValue];
     
-    // determine the player that won and move the animal(s) from loser to winner
+    // determine the player that won and move the animal(s) from loser to winner and return winner (NULL on draw)
     if ([[[self.tradeBids objectAtIndex:0] lastObject] integerValue] > [[[self.tradeBids objectAtIndex:1] lastObject] integerValue]) {
         self.currentPlayer.animalCards[animalIndex] = [NSNumber numberWithInt:[self.currentPlayer.animalCards[animalIndex] integerValue] + self.amountOfAnimalsForTrade];
         self.tradeEnemy.animalCards[animalIndex] = [NSNumber numberWithInt:[self.tradeEnemy.animalCards[animalIndex] integerValue] - self.amountOfAnimalsForTrade];
