@@ -26,7 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // alloc new gameplay element
+    
     self.gp = [[XYZGameplay alloc] init];
+    
+    // set up tab bar
     self.tabBar.barStyle = UIBarStyleDefault;
     self.tabBar.translucent = NO;
     UITabBarItem *auctionItem = [self.tabBar.items objectAtIndex:0];

@@ -224,7 +224,6 @@
 				EB723FA3195437EF0071E80C /* XYZAppDelegate.m */,
 				EB8A84E5195AEBBC006B079A /* XYZTabBarViewController.h */,
 				EB8A84E6195AEBBC006B079A /* XYZTabBarViewController.m */,
-				EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */,
 				EBE783E5195C6C29005AB75F /* Stats */,
 				EBE783E6195C6C36005AB75F /* Trade */,
 				EBE783E7195C6C41005AB75F /* Auction */,
@@ -238,6 +237,7 @@
 		EB723F9A195437EF0071E80C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB79FF9A195DBD9F0050BB2D /* Grass 5.jpg */,
 				EB79FF9C195DC8340050BB2D /* set.png */,
 				EB79FF77195DB84F0050BB2D /* baricons */,
 				EB79FF75195DA1640050BB2D /* score.png */,

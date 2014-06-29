@@ -29,9 +29,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // perform the trade and save the winner
     XYZPlayer *winner = [self.gp trade];
+    
+    // determine the index of the traded animal
     int animalIndex = [[self.gp.deck.animalDict objectForKey:self.gp.animalForTrade] integerValue];
     
+    // display result
     if (winner.name == NULL) {
         winnerLabel.text = @"It's a draw!";
     }
@@ -57,6 +62,7 @@
 }
 */
 
+// back to game
 - (IBAction)back:(id)sender {
     [self.gp nextTurn];
     [self.presentingViewController.presentingViewController.presentingViewController.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];

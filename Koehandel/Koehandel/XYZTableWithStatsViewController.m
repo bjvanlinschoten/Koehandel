@@ -39,11 +39,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// set up 3 sections in table view; player, animals and money
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 3;
 }
 
+// set up the rows in the sections
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
@@ -57,6 +60,7 @@
     }
 }
 
+// set up section titles
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return self.player.name;
@@ -70,6 +74,7 @@
 }
 
 
+// set up table cells from custom table cell StatsTableViewCell
 - (StatsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *tableIdentifier = @"tableItem";
@@ -80,6 +85,7 @@
         cell = [[StatsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
     
+    // table cells for first section, player
     if (indexPath.section == 0){
         if (indexPath.row == 0) {
             cell.animalAmount.text = [NSString stringWithFormat:@"Score: %d", [self.player getSets]];
@@ -94,11 +100,13 @@
             cell.animalImage.image = [UIImage imageNamed:@"coins.png"];
         }
     }
+    // table cells for second section, animals
     else if (indexPath.section == 1) {
         cell.animalAmount.text = [[self.player.animalCards objectAtIndex:indexPath.row] stringValue];
         NSLog(@"%@", [self.deck.animals objectAtIndex:indexPath.row]);
         cell.animalImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.deck.animals objectAtIndex:indexPath.row]]];
     }
+    // table cells for third section, money
     else {
         if (indexPath.row == 0 ) {
             cell.animalAmount.text = [NSString stringWithFormat:@"Total amount: %d", [self.player getTotalMoney]];
@@ -113,6 +121,7 @@
     return cell;
 }
 
+// set table cell height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }

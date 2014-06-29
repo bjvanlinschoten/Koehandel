@@ -13,7 +13,9 @@
 
 - (id) initWithValue:(NSInteger)value Animal:(NSString *)animal {
 	if(self = [super init]) {
-		self.value = value;
+		
+        // init card with animal and value
+        self.value = value;
 		self.animal = animal;
 	}
 	return self;

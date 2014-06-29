@@ -32,13 +32,13 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
     
     self.gp.bidCounter++;
     
+    // determine and display bidder
     if (self.gp.bidCounter == 1) {
         self.bidder = self.gp.currentPlayer;
     }
     else if (self.gp.bidCounter == 2) {
         self.bidder = self.gp.tradeEnemy;
     }
-    
     self.playerLabel.text = [NSString stringWithFormat:@"%@ make your bet!", self.bidder.name];
 
     
@@ -56,6 +56,7 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
         else return NSOrderedSame;
     }];
     
+    // set-up setters with max amount equal to amount of cards or hide them if no cards of that value
     for (int i = 0; i < 6; i++) {
         if ([[self.bidder.moneyCards objectAtIndex:i] integerValue] == 0) {
             [[self.amountCardsLabels objectAtIndex:i] setText:[NSString stringWithFormat:@"No cards with value %d!", moneyValues[i]]];
@@ -66,6 +67,7 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
         }
     }
     
+    // display total bidding amount
     self.totalAmount = 0;
     self.totalAmountLabel.text = @"Total amount: 0";
     
@@ -91,6 +93,8 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
 - (IBAction)stepperValueChanged:(id)sender {
     int index = 0;
     self.totalAmount = 0;
+    
+    // update totalAmount and determine which stepper changed
     for (int i = 0; i < 6; i++){
         self.totalAmount += (int)[(UIStepper *)[self.cardSteppers objectAtIndex:i] value] * moneyValues[i];
         if (sender == [self.cardSteppers objectAtIndex:i]) {
@@ -98,7 +102,11 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
             break;
         }
     }
+    
+    // determine stepper value
     int stepperValue = (int)[(UIStepper *)[self.cardSteppers objectAtIndex:index] value];
+    
+    // determine correct grammar
     NSString *tempString;
     if (stepperValue == 1) {
         tempString = @"card";
@@ -106,11 +114,15 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
     else {
         tempString = @"cards";
     }
+    
+    // update labels
     [[self.amountCardsLabels objectAtIndex:index] setText:[NSString stringWithFormat:@"%d %@ with value %d", stepperValue, tempString, moneyValues[index]]];
     self.totalAmountLabel.text = [NSString stringWithFormat:@"Total amount: %d", self.totalAmount];
 }
 
 - (IBAction)placeBet:(id)sender {
+    
+    // alloc new mutable array for the cards the player bid and add to tradeBids array in gameplay object
     NSMutableArray *bidInCards = [[NSMutableArray alloc] init];
     for (int i = 0; i < 6; i++){
         [bidInCards addObject:[NSNumber numberWithInt:(int)[(UIStepper *)[self.cardSteppers objectAtIndex:i] value]]];
@@ -119,6 +131,7 @@ NSInteger moneyValues[6] = {0, 10, 50, 100, 200, 500};
     [bidInCards addObject:[NSNumber numberWithInt:self.totalAmount]];
     [self.gp.tradeBids addObject:bidInCards];
     
+    // go to confirm bid screen
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     XYZBiddingViewController *cbvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZConfirmBidViewController"];
     cbvc.gp = self.gp;

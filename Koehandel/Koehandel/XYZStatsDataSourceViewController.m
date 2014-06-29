@@ -26,15 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.gp = [(XYZTabBarViewController *)self.tabBarController gp];
+    
+    // set up the page view
     self.statsPageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"XYZStatsPageViewController"];
     self.statsPageViewController.dataSource = self;
-    
     XYZTableWithStatsViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.statsPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
     [self addChildViewController:self.statsPageViewController];
     [self.view addSubview:self.statsPageViewController.view];
     [self.statsPageViewController didMoveToParentViewController:self];
@@ -47,6 +48,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// page before current page
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     NSUInteger index = ((XYZTableWithStatsViewController *) viewController).pageIndex;
@@ -58,6 +60,7 @@
     return [self viewControllerAtIndex:index];
 }
 
+// page after current page
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     NSUInteger index = ((XYZTableWithStatsViewController *) viewController).pageIndex;
@@ -73,6 +76,7 @@
     return [self viewControllerAtIndex:index];
 }
 
+// set up page
 - (XYZTableWithStatsViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([self.gp.players count] == 0) || (index >= [self.gp.players count])) {
@@ -87,6 +91,7 @@
     return twsvc;
 }
 
+// set up page indicator
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
     return [self.gp.players count];
 }

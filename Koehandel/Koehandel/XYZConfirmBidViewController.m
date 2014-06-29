@@ -29,17 +29,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // count and display cards player 1 bid
     int totalCards1 = 0;
     for (int i = 0; i < 6; i++) {
         totalCards1 += [[[self.gp.tradeBids objectAtIndex:0] objectAtIndex:i] integerValue];
     }
-    
     self.player1BidLabel.text = [NSString stringWithFormat:@"%@'s bid exists of %d cards", self.gp.currentPlayer.name, totalCards1];
     
+    // if only player 1 made bid, show screen for player 2 to make counterbid
     if (self.gp.bidCounter == 1) {
         self.player2BidLabel.hidden = YES;
         [self.confirmButton setTitle:@"Make counterbid" forState:UIControlStateNormal];
     }
+    // if both players made a bid show the amount of cards they bid and proceed button
     else {
         int totalCards2 = 0;
         for (int i = 0; i < 6; i++) {
@@ -69,6 +72,7 @@
 */
 
 - (IBAction)confirm:(id)sender {
+    // if only player 1 bid, go to player 2 bidding screen
     if (self.gp.bidCounter == 1) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         XYZBiddingViewController *bvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZBiddingViewController"];
@@ -76,6 +80,7 @@
         [bvc setModalPresentationStyle:UIModalPresentationFullScreen];
         [self presentViewController:bvc animated:YES completion:nil];
     }
+    // go to the result screen
     else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         XYZBiddingViewController *trvc = [storyboard instantiateViewControllerWithIdentifier:@"XYZTradeResultViewController"];
